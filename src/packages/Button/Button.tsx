@@ -34,22 +34,13 @@ export const Button = ({
     }
   };
 
-  const getShape = () => {
-    switch (shape) {
-      case ButtonShape.Round:
-        return s.round;
-      default:
-        return s.default;
-    }
-  };
-
   const buttonClass = cn(
     s.wrapper,
-    getShape(),
     getVariant(),
     getSize(),
     {
       [s.disabled]: disabled,
+      [s.round]: shape === ButtonShape.Round,
     },
     className,
   );

@@ -1,7 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { Button } from "../packages/Button";
-import { ButtonVariant } from "../packages/Button/types";
+import { Button } from "../../packages/Button";
+import styles from "./Button.module.scss";
+import {
+  ButtonShape,
+  ButtonSize,
+  ButtonVariant,
+} from "../../packages/Button/types";
 
 const meta = {
   title: "Base/Button",
@@ -12,18 +17,18 @@ const meta = {
   tags: ["autodocs"],
   argTypes: {
     size: {
-      options: ["small", "medium", "big"],
+      options: [ButtonSize.Small, ButtonSize.Medium, ButtonSize.Big],
       control: {
         type: "inline-radio",
       },
-      defaultValue: "medium",
+      defaultValue: ButtonSize.Medium,
     },
     shape: {
-      options: ["round", "square"],
+      options: [ButtonShape.Round, ButtonShape.Square],
       control: {
         type: "inline-radio",
       },
-      defaultValue: "square",
+      defaultValue: ButtonShape.Square,
     },
     disabled: {
       options: [true, false],
@@ -43,6 +48,7 @@ export const Filled: Story = {
   args: {
     text: "Button",
     variant: ButtonVariant.Filled,
+    onClick: fn(),
   },
 };
 
@@ -50,6 +56,7 @@ export const Outline: Story = {
   args: {
     text: "Button",
     variant: ButtonVariant.Outline,
+    onClick: fn(),
   },
 };
 
@@ -57,5 +64,15 @@ export const Ghost: Story = {
   args: {
     text: "Button",
     variant: ButtonVariant.Ghost,
+    onClick: fn(),
+  },
+};
+
+export const Custom: Story = {
+  args: {
+    text: "Button",
+    variant: ButtonVariant.Filled,
+    onClick: fn(),
+    className: styles.test,
   },
 };
