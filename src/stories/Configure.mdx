@@ -1,14 +1,92 @@
 import { Meta } from "@storybook/blocks";
 
-<Meta title='UIkit' />
+<Meta title='Get started' id='uikit--docs' />
 
-<div className="class">
+<div className="main">
+  <h1>Welcome to PoniKit</h1>
+  <h4>This UI Kit provides a collection of components to kickstart your project.</h4>
 
+<h2>Installation</h2>
+<span>To get started, install the UI Kit using npm:</span>
+<div className='code'>npm i @ponikit/button</div>
+
+<h2>Usage</h2>
+<span>Once installed, import the components into your project and start using them:</span>
+<div className='code'>{`import { Button, Input } from '@your-namespace/your-ui-kit';`}</div>
+
+<h2>GitHub Repository</h2>
+<div className='social'>
+  <span>Find the source code on</span>
+  <a
+    className='social'
+    href='https://github.com/WouterLab/ponikit'
+    target='_blank'
+    rel='noopener noreferrer'
+  >
+    <span>Github</span>
+    <img
+      src='https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png'
+      alt='GitHub Logo'
+    />
+  </a>
+</div>
+
+<h2>Contact</h2>
+<div className='social'>
+  <span>For inquiries and support, reach out to me on Telegram:</span>
+  <a href='https://t.me/boymep' target='_blank' rel='noopener noreferrer'>
+    <span>@boymep</span>
+  </a>
+</div>
+
+<h2>Project Commands</h2>
+<span>Install the project dependencies:</span>
+<div className='code'>npm i</div>
+<span>Run Storybook:</span>
+<div className='code'>npm run storybook</div>
+
+  <h2>Figma Design</h2>
+  <span>Explore the design on Figma: <a href="https://www.figma.com/example" target="_blank" rel="noopener noreferrer">PoniKit Design</a></span>
 </div>
 
 <style>
   {`
-  .class {
-  }
-`}
+    .main {
+      color: #2b2b2b;
+      font-family: 'Arial', sans-serif;
+    }
+
+    a {
+      color: #e5e5e5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .code {
+      background-color: #303030;
+      padding: 10px;
+      overflow-x: auto;
+      border-radius: 10px;
+      color: #e5e5e5;
+      margin: 10px 0;
+    }
+
+    img {
+      height: 20px;
+      width: 20px;
+    }
+
+    .social {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    p {
+      margin: 0;
+    }
+  `}
 </style>

@@ -46,7 +46,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Filled: Story = {
   args: {
-    text: "Button",
+    text: "Click!",
     variant: ButtonVariant.Filled,
     onClick: fn(),
   },
@@ -54,7 +54,7 @@ export const Filled: Story = {
 
 export const Outline: Story = {
   args: {
-    text: "Button",
+    text: "Click!",
     variant: ButtonVariant.Outline,
     onClick: fn(),
   },
@@ -62,7 +62,7 @@ export const Outline: Story = {
 
 export const Ghost: Story = {
   args: {
-    text: "Button",
+    text: "Click!",
     variant: ButtonVariant.Ghost,
     onClick: fn(),
   },
@@ -70,7 +70,7 @@ export const Ghost: Story = {
 
 export const Custom: Story = {
   args: {
-    text: "Button",
+    text: "Click!",
     variant: ButtonVariant.Filled,
     onClick: fn(),
     className: styles.test,
