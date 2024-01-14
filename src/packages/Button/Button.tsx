@@ -2,7 +2,7 @@ import s from "./Button.module.scss";
 import cn from "classnames";
 import { ButtonProps, ButtonShape, ButtonSize, ButtonVariant } from "./types";
 
-export const Button = ({
+export function Button({
   text,
   variant = ButtonVariant.Filled,
   shape = ButtonShape.Square,
@@ -11,7 +11,7 @@ export const Button = ({
   disabled,
   onClick,
   ...rest
-}: ButtonProps) => {
+}: ButtonProps) {
   const getSize = () => {
     switch (size) {
       case ButtonSize.Big:
@@ -46,13 +46,8 @@ export const Button = ({
   );
 
   return (
-    <button
-      className={buttonClass}
-      onClick={onClick}
-      disabled={disabled}
-      {...rest}
-    >
+    <button className={buttonClass} onClick={onClick} disabled={disabled} {...rest}>
       {text}
     </button>
   );
-};
+}

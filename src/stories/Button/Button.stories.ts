@@ -2,14 +2,10 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import { Button } from "../../packages/Button";
 import styles from "./Button.module.scss";
-import {
-  ButtonShape,
-  ButtonSize,
-  ButtonVariant,
-} from "../../packages/Button/types";
+import { ButtonShape, ButtonSize, ButtonVariant } from "../../packages/Button/types";
 
 const meta = {
-  title: "Base/Button",
+  title: "Components/Button",
   component: Button,
   parameters: {
     layout: "centered",
