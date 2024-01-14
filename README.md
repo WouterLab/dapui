@@ -18,12 +18,6 @@ Once installed, import the components into your project and start using them:
 import { Button, Input } from '@your-namespace/your-ui-kit';
 ```
 
-## GitHub Repository
-
-Find the source code on [GitHub](https://github.com/WouterLab/ponikit).
-
-![GitHub Logo](https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png)
-
 ## Contact
 
 For inquiries and support, reach out on Telegram:
