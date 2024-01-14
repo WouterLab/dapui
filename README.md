@@ -1,21 +1,56 @@
-<h1>React Latest (Vite | TypeScript)</h1>
+# PoniKit
 
-<p>
-  This is project generated to serve as a reproduction starter for Storybook.
-</p>
+Welcome to PoniKit - a UI Kit that provides a collection of components to kickstart your project.
 
-<a  href="https://stackblitz.com/github/storybookjs/sandboxes/tree/next/react-vite/default-ts/after-storybook?preset=node=">
-  View it in Stackblitz
-</a>
+## Installation
 
-<h3>Testing instructions</h3>
+To get started, install the UI Kit using npm:
 
-<p>Install dependencies:</p>
-<pre>
-  npm i
-</pre>
+```bash
+npm i @ponikit/button
+```
 
-<p>Run Storybook:</p>
-<pre>
-  npm run storybook
-</pre>
+## Usage
+
+Once installed, import the components into your project and start using them:
+
+```javascript
+import { Button, Input } from '@your-namespace/your-ui-kit';
+```
+
+## GitHub Repository
+
+Find the source code on [GitHub](https://github.com/WouterLab/ponikit).
+
+![GitHub Logo](https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png)
+
+## Contact
+
+For inquiries and support, reach out on Telegram:
+
+- Telegram: [@boymep](https://t.me/boymep)
+
+## Project Commands
+
+Install project dependencies:
+
+```bash
+npm i
+```
+
+Run Storybook:
+
+```bash
+npm run storybook
+```
+
+## Figma Design
+
+Explore the design on Figma: [PoniKit Design](https://www.figma.com/example)
+
+## Project Information
+
+- **Color Scheme:** #2b2b2b, #303030, #e5e5e5
+- **Font:** Kanit, sans-serif
+
+---
