@@ -1,0 +1,42 @@
+.wrapper {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.block {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #2a343e;
+}
+
+.theme {
+  background-color: #2a343e;
+  color: #fff;
+  font-size: 36px;
+  height: 100px;
+  width: 300px;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.color {
+  padding: 0 20px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.view {
+  border-radius: 10px;
+  width: 50%;
+  height: 50px;
+  border: 2px solid #000;
+}

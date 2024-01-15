@@ -4,10 +4,10 @@ Welcome to PoniKit - a UI Kit that provides a collection of components to kickst
 
 ## Installation
 
-To get started, install the UI Kit using npm:
+To get started, install the UI Kit components using npm:
 
 ```bash
-npm i @ponikit/button
+npm i @ponikit/Button
 ```
 
 ## Usage
@@ -15,7 +15,8 @@ npm i @ponikit/button
 Once installed, import the components into your project and start using them:
 
 ```javascript
-import { Button, Input } from '@your-namespace/your-ui-kit';
+import { Button } from "@ponikit/Button";
+import { Input } from "@ponikit/Input";
 ```
 
 ## Contact
