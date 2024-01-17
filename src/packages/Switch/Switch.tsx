@@ -9,10 +9,10 @@ export function Switch({
   onChange,
   disabled = false,
   size = SwitchSize.Big,
-  onColor = COLORS_DEFAULT.BLACK.LIGHT,
-  offColor = COLORS_DEFAULT.GREY.LIGHT,
-  onHandleColor = COLORS_DEFAULT.WHITE.LIGHT,
-  offHandleColor = COLORS_DEFAULT.WHITE.LIGHT,
+  onColor = COLORS_DEFAULT.BLACK[0],
+  offColor = COLORS_DEFAULT.GREY[20],
+  onHandleColor = COLORS_DEFAULT.GREY[0],
+  offHandleColor = COLORS_DEFAULT.GREY[0],
 }: SwitchProps) {
   const { height, width, handleDiameter } = useMemo(() => SizeMap[size], [size]);
 
