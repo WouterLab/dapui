@@ -4,6 +4,11 @@ import "../src/global.scss";
 
 const preview: Preview = {
   parameters: {
+    options: {
+      storySort: {
+        order: ["Theme", "Typography", "Base", "Composite"],
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,

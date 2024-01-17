@@ -4,7 +4,7 @@ import { SwitchProps, SwitchSize } from "../../packages/Switch/types";
 import { useEffect, useState } from "react";
 
 const meta = {
-  title: "Components/Switch",
+  title: "Base/Switch",
   component: SwitchComponent,
   parameters: {
     layout: "centered",
@@ -43,7 +43,7 @@ function Template({ checked, size, ...args }: SwitchProps) {
 
 export default meta;
 
-export const Switch: StoryFn<SwitchProps> = Template.bind({});
-Switch.args = {
+export const Default: StoryFn<SwitchProps> = Template.bind({});
+Default.args = {
   checked: true,
 };

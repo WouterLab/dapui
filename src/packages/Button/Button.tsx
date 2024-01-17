@@ -35,7 +35,7 @@ export function Button({
   };
 
   const buttonClass = cn(
-    s.wrapper,
+    s.button,
     getVariant(),
     getSize(),
     {

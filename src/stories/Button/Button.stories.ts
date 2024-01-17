@@ -5,7 +5,7 @@ import styles from "./Button.module.scss";
 import { ButtonShape, ButtonSize, ButtonVariant } from "../../packages/Button/types";
 
 const meta = {
-  title: "Components/Button",
+  title: "Base/Button",
   component: Button,
   parameters: {
     layout: "centered",
