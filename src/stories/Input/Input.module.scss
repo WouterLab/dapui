@@ -1,0 +1,16 @@
+.test {
+  background-color: peachpuff;
+  border: 2px solid burlywood;
+  color: white;
+
+  &:hover {
+    background-color: #fbebdd;
+    color: gray;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

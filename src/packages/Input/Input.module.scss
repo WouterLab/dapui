@@ -1,0 +1,55 @@
+.input {
+  transition: background-color 0.3s, opacity 0.3s, color 0.3s;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  height: fit-content;
+  color: #2b2b2b;
+  background-color: #e5e5e5;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+
+  &:hover {
+    background-color: #d4d4d4;
+  }
+
+  &:focus {
+    background-color: #d4d4d4;
+    outline: 2px solid #2b2b2b;
+    outline-offset: -2px;
+  }
+}
+
+.small {
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+.medium {
+  font-size: 18px;
+  padding: 10px 16px;
+}
+
+.big {
+  font-size: 22px;
+  padding: 14px 24px;
+}
+
+.outline {
+  background-color: transparent;
+  outline: 2px solid #454545;
+  outline-offset: -2px;
+  color: #2b2b2b;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}

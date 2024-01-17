@@ -2,19 +2,21 @@ import { ColorMap } from "./types";
 
 export const COLORS_DEFAULT: ColorMap = {
   GREY: {
-    LIGHT: "#b0b0b0",
-    DARK: "#454545",
+    0: "#b0b0b0",
+    100: "#454545",
   },
   WHITE: {
-    LIGHT: "#ffffff",
-    DARK: "#e5e5e5",
+    0: "#ffffff",
+    50: "#e5e5e5",
+    100: "#d4d4d4",
   },
   BLACK: {
-    LIGHT: "#2b2b2b",
-    DARK: "#1a1a1a",
+    0: "#2b2b2b",
+    80: "#1a1a1a",
+    100: "#000000",
   },
   RED: {
-    LIGHT: "#f0767e",
-    DARK: "#b13c44",
+    0: "#f0767e",
+    100: "#b13c44",
   },
 };

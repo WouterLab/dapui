@@ -1,0 +1,77 @@
+.button {
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  height: fit-content;
+  color: #e5e5e5;
+  background-color: #454545;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #2e2e2e;
+  }
+
+  &:active {
+    background-color: #1a1a1a;
+  }
+}
+
+.small {
+  font-size: 14px;
+  padding: 5px 30px;
+}
+
+.medium {
+  font-size: 18px;
+  padding: 7px 30px;
+}
+
+.big {
+  font-size: 22px;
+  padding: 10px 30px;
+}
+
+.outline {
+  background-color: transparent;
+  outline: 2px solid #454545;
+  outline-offset: -2px;
+  color: #2b2b2b;
+
+  &:hover {
+    background-color: #454545;
+    color: #e5e5e5;
+  }
+
+  &:active {
+    background-color: #1a1a1a;
+    outline: #1a1a1a;
+  }
+}
+
+.ghost {
+  background-color: transparent;
+  padding: 0 30px;
+  color: #2b2b2b;
+
+  &:hover {
+    background-color: transparent;
+    color: #b0b0b0;
+  }
+
+  &:active {
+    background-color: transparent;
+    color: #e5e5e5;
+  }
+}
+
+.round {
+  border-radius: 50px;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}

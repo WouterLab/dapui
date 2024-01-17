@@ -19,6 +19,13 @@ const meta = {
       },
       defaultValue: ButtonSize.Medium,
     },
+    variant: {
+      options: [ButtonVariant.Filled, ButtonVariant.Outline, ButtonVariant.Ghost],
+      control: {
+        type: "inline-radio",
+      },
+      defaultValue: ButtonVariant.Filled,
+    },
     shape: {
       options: [ButtonShape.Round, ButtonShape.Square],
       control: {
@@ -44,7 +51,6 @@ export const Filled: Story = {
   args: {
     text: "Click!",
     variant: ButtonVariant.Filled,
-    onClick: fn(),
   },
 };
 
@@ -52,7 +58,6 @@ export const Outline: Story = {
   args: {
     text: "Click!",
     variant: ButtonVariant.Outline,
-    onClick: fn(),
   },
 };
 
@@ -60,7 +65,6 @@ export const Ghost: Story = {
   args: {
     text: "Click!",
     variant: ButtonVariant.Ghost,
-    onClick: fn(),
   },
 };
 
@@ -68,7 +72,6 @@ export const Custom: Story = {
   args: {
     text: "Click!",
     variant: ButtonVariant.Filled,
-    onClick: fn(),
     className: styles.test,
   },
 };

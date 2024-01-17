@@ -22,6 +22,10 @@
   margin-bottom: 20px;
 }
 
+.key {
+  font-weight: 700;
+}
+
 .color {
   padding: 0 20px 20px 20px;
   display: flex;
@@ -32,7 +36,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2px 0;
+  padding: 5px 0;
 }
 
 .view {

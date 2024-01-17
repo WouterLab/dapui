@@ -19,7 +19,7 @@ function Template() {
           {Object.entries(theme).map(([key, color]) => (
             <div className={styles.color}>
               <div className={styles.text}>
-                <div>{key}</div>
+                <div className={styles.key}>{key}</div>
                 <div>{color}</div>
               </div>
               <div className={styles.view} style={{ backgroundColor: color }} />
