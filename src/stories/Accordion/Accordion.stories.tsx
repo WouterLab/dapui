@@ -4,7 +4,7 @@ import {
   AccordionProps,
   AccordionStep,
 } from "../../packages/Accordion";
-import styles from "./Accordion.module.scss";
+import styles from "./Accordion.module.css";
 
 const meta = {
   title: "Composite/Accordion",

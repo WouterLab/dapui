@@ -1,4 +1,7 @@
-.checkbox {
+import { styled } from "@linaria/react";
+import { css } from "@linaria/core";
+
+export const Wrapper = styled.div`
   border-radius: 10px;
   width: 24px;
   height: 24px;
@@ -13,9 +16,9 @@
   &:active {
     background-color: #efefef;
   }
-}
+`;
 
-.checked {
+export const cssChecked = css`
   background-color: #2b2b2b;
 
   &:hover {
@@ -25,4 +28,4 @@
   &:active {
     background-color: #151515;
   }
-}
+`;

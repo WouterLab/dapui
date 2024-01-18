@@ -1,9 +1,18 @@
 import { AccordionProps, AccordionStep } from "./types";
-import s from "./Accordion.module.scss";
 import { H3 } from "../Typography";
 import { HTMLAttributes, useRef, useState } from "react";
 import cn from "classnames";
 import { Divider } from "../Divider";
+import {
+  Content,
+  Header,
+  StepWrapper,
+  Title,
+  Wrapper,
+  cssArrow,
+  cssHidden,
+  cssReverse,
+} from "./styled";
 
 function ArrowSvg({ ...args }: HTMLAttributes<SVGElement>) {
   return (
@@ -33,13 +42,13 @@ function ArrowSvg({ ...args }: HTMLAttributes<SVGElement>) {
 function Step({ title, content, arrowClassName, onChange, isOpenDefault }: AccordionStep) {
   const [isOpen, setIsOpen] = useState(isOpenDefault);
   const ContentRef = useRef<HTMLDivElement>(null);
-  const contentClassName = cn(s.content, {
-    [s.hidden]: !isOpen,
+  const contentClassName = cn({
+    [cssHidden]: !isOpen,
   });
   const arrowClass = cn(
-    s.arrow,
+    cssArrow,
     {
-      [s.reverse]: isOpen,
+      [cssReverse]: isOpen,
     },
     arrowClassName,
   );
@@ -60,18 +69,22 @@ function Step({ title, content, arrowClassName, onChange, isOpenDefault }: Accor
     if (onChange !== undefined) onChange();
   };
   return (
-    <div className={s.step}>
-      <div className={s.header} onClick={toggleOpening}>
-        <div className={s.title}>
+    <StepWrapper>
+      <Header onClick={toggleOpening}>
+        <Title>
           <H3>{title}</H3>
           <ArrowSvg className={arrowClass} />
-        </div>
-      </div>
+        </Title>
+      </Header>
 
-      <div className={contentClassName} ref={ContentRef} style={{ maxHeight: currentMaxHeight }}>
+      <Content
+        className={contentClassName}
+        ref={ContentRef}
+        style={{ maxHeight: currentMaxHeight }}
+      >
         {content}
-      </div>
-    </div>
+      </Content>
+    </StepWrapper>
   );
 }
 
@@ -82,10 +95,8 @@ export function Accordion({
   defaultOpenedSteps,
   arrowClassName,
 }: AccordionProps) {
-  const accordionClassName = cn(s.accordion, className);
-
   return (
-    <div className={accordionClassName}>
+    <Wrapper className={className}>
       {steps.map(({ title, content }, index) => {
         const lastIndex = steps.length - 1;
         const isOpened = defaultOpenedSteps?.includes(index);
@@ -103,6 +114,6 @@ export function Accordion({
           </>
         );
       })}
-    </div>
+    </Wrapper>
   );
 }

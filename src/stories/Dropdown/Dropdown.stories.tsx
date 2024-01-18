@@ -1,6 +1,6 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { Dropdown as DropdownComponent, DropdownProps } from "../../packages/Dropdown";
-import styles from "./Dropdown.module.scss";
+import styles from "./Dropdown.module.css";
 
 const meta = {
   title: "Composite/Dropdown",

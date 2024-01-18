@@ -1,5 +1,11 @@
-.input {
-  transition: background-color 0.3s, opacity 0.3s, color 0.3s;
+import { styled } from "@linaria/react";
+import { css } from "@linaria/core";
+
+export const Wrapper = styled.input`
+  transition:
+    background-color 0.3s,
+    opacity 0.3s,
+    color 0.3s;
   font-family: "Kanit", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -19,24 +25,24 @@
     outline: 2px solid #2b2b2b;
     outline-offset: -2px;
   }
-}
+`;
 
-.small {
+export const cssSmall = css`
   font-size: 14px;
   padding: 5px 10px;
-}
+`;
 
-.medium {
+export const cssMedium = css`
   font-size: 18px;
   padding: 10px 16px;
-}
+`;
 
-.big {
+export const cssBig = css`
   font-size: 22px;
   padding: 14px 24px;
-}
+`;
 
-.outline {
+export const cssOutline = css`
   background-color: transparent;
   outline: 2px solid #454545;
   outline-offset: -2px;
@@ -46,10 +52,10 @@
   &:focus {
     background-color: transparent;
   }
-}
+`;
 
-.disabled {
+export const cssDisabled = css`
   opacity: 0.5;
   cursor: default;
   pointer-events: none;
-}
+`;

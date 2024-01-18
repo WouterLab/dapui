@@ -1,4 +1,4 @@
-import s from "./Button.module.scss";
+import s from "./Button.module.css";
 import cn from "classnames";
 import { ButtonProps, ButtonShape, ButtonSize, ButtonVariant } from "./types";
 

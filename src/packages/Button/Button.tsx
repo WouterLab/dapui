@@ -1,6 +1,15 @@
-import s from "./Button.module.scss";
 import cn from "classnames";
 import { ButtonProps, ButtonShape, ButtonSize, ButtonVariant } from "./types";
+import {
+  Wrapper,
+  cssBig,
+  cssDisabled,
+  cssRound,
+  cssGhost,
+  cssMedium,
+  cssOutline,
+  cssSmall,
+} from "./styled";
 
 export function Button({
   text,
@@ -15,39 +24,38 @@ export function Button({
   const getSize = () => {
     switch (size) {
       case ButtonSize.Big:
-        return s.big;
+        return cssBig;
       case ButtonSize.Small:
-        return s.small;
+        return cssSmall;
       default:
-        return s.medium;
+        return cssMedium;
     }
   };
 
   const getVariant = () => {
     switch (variant) {
       case ButtonVariant.Outline:
-        return s.outline;
+        return cssOutline;
       case ButtonVariant.Ghost:
-        return s.ghost;
+        return cssGhost;
       default:
-        return s.filled;
+        return "";
     }
   };
 
   const buttonClass = cn(
-    s.button,
     getVariant(),
     getSize(),
     {
-      [s.disabled]: disabled,
-      [s.round]: shape === ButtonShape.Round,
+      [cssDisabled]: disabled,
+      [cssRound]: shape === ButtonShape.Round,
     },
     className,
   );
 
   return (
-    <button className={buttonClass} onClick={onClick} disabled={disabled} {...rest}>
+    <Wrapper className={buttonClass} onClick={onClick} disabled={disabled} {...rest}>
       {text}
-    </button>
+    </Wrapper>
   );
 }

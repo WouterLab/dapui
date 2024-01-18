@@ -1,5 +1,5 @@
 import type { Meta, StoryFn } from "@storybook/react";
-import styles from "./Typography.module.scss";
+import styles from "./Typography.module.css";
 import { TextTag } from "../../packages/Typography";
 import * as Tags from "../../packages/Typography/Typography";
 

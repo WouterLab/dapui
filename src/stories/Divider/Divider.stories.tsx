@@ -1,6 +1,6 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { DividerProps } from "../../packages/Divider";
-import styles from "./Divider.module.scss";
+import styles from "./Divider.module.css";
 import { Divider as DividerComponent } from "../../packages/Divider";
 
 const meta = {

@@ -1,6 +1,6 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { InputProps, InputSize, InputVariant } from "../../packages/Input";
-import styles from "./Input.module.scss";
+import styles from "./Input.module.css";
 import { Input as InputComponent } from "../../packages/Input";
 import { ChangeEvent, useState } from "react";
 

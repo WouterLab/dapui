@@ -1,8 +1,16 @@
 import { DropdownProps } from "./types";
-import s from "./Dropdown.module.scss";
-import { H2Bold, H3 } from "../Typography";
 import { HTMLAttributes, useRef, useState } from "react";
 import cn from "classnames";
+import {
+  Header,
+  Subtitle,
+  Title,
+  TitleWrapper,
+  Wrapper,
+  cssArrow,
+  cssHidden,
+  cssReverse,
+} from "./styled";
 
 function ArrowSvg({ ...args }: HTMLAttributes<SVGElement>) {
   return (
@@ -40,14 +48,13 @@ export function Dropdown({
 }: DropdownProps) {
   const [isOpen, setIsOpen] = useState(isOpenDefault);
   const ContentRef = useRef<HTMLDivElement>(null);
-  const DropdownClassName = cn(s.dropdown, className);
-  const contentClassName = cn(s.content, {
-    [s.hidden]: !isOpen,
+  const contentClassName = cn({
+    [cssHidden]: !isOpen,
   });
   const arrowClass = cn(
-    s.arrow,
+    cssArrow,
     {
-      [s.reverse]: isOpen,
+      [cssReverse]: isOpen,
     },
     arrowClassName,
   );
@@ -69,18 +76,18 @@ export function Dropdown({
   };
 
   return (
-    <div className={DropdownClassName}>
-      <div className={s.header} onClick={toggleOpening}>
-        <div className={s.title}>
-          <H2Bold>{title}</H2Bold>
+    <Wrapper className={className}>
+      <Header onClick={toggleOpening}>
+        <TitleWrapper>
+          <Title>{title}</Title>
           <ArrowSvg className={arrowClass} />
-        </div>
-        {subtitle && <H3 className={s.subtitle}>{subtitle}</H3>}
-      </div>
+        </TitleWrapper>
+        {subtitle && <Subtitle>{subtitle}</Subtitle>}
+      </Header>
 
       <div className={contentClassName} ref={ContentRef} style={{ maxHeight: currentMaxHeight }}>
         {children}
       </div>
-    </div>
+    </Wrapper>
   );
 }

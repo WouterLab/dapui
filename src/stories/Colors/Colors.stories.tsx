@@ -1,5 +1,5 @@
 import type { Meta, StoryFn } from "@storybook/react";
-import styles from "./Colors.module.scss";
+import styles from "./Colors.module.css";
 import { COLORS_DEFAULT, ColorMap } from "../../packages/Colors";
 
 const meta: Meta = {

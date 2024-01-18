@@ -1,14 +1,13 @@
 import { CheckboxProps } from "./types";
-import s from "./Checkbox.module.scss";
 import classNames from "classnames";
+import { Wrapper, cssChecked } from "./styled";
 
 export const Checkbox = ({ checked, onChange, className }: CheckboxProps) => {
   const checkboxClassName = classNames(
-    s.checkbox,
     {
-      [s.checked]: checked,
+      [cssChecked]: checked,
     },
     className,
   );
-  return <div className={checkboxClassName} onClick={onChange}></div>;
+  return <Wrapper className={checkboxClassName} onClick={onChange}></Wrapper>;
 };

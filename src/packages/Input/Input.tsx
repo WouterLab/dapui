@@ -1,7 +1,7 @@
-import s from "./Input.module.scss";
 import cn from "classnames";
 import { InputProps, InputSize, InputVariant } from "./types";
 import { ChangeEvent, useState } from "react";
+import { Wrapper, cssBig, cssDisabled, cssMedium, cssOutline, cssSmall } from "./styled";
 
 export function Input({
   value,
@@ -26,35 +26,34 @@ export function Input({
   const getSize = () => {
     switch (size) {
       case InputSize.Big:
-        return s.big;
+        return cssBig;
       case InputSize.Small:
-        return s.small;
+        return cssSmall;
       default:
-        return s.medium;
+        return cssMedium;
     }
   };
 
   const getVariant = () => {
     switch (variant) {
       case InputVariant.Outline:
-        return s.outline;
+        return cssOutline;
       default:
-        return s.filled;
+        return "";
     }
   };
 
   const inputClass = cn(
-    s.input,
     getVariant(),
     getSize(),
     {
-      [s.disabled]: disabled,
+      [cssDisabled]: disabled,
     },
     className,
   );
 
   return (
-    <input
+    <Wrapper
       value={inputValue}
       className={inputClass}
       disabled={disabled}

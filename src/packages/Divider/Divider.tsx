@@ -1,6 +1,5 @@
+import { Wrapper } from "./styled";
 import { DividerProps } from "./types";
-import s from "./Divider.module.scss";
-import cn from "classnames";
 
 export function Divider({ color = "#e5e5e5", margin = 20, className }: DividerProps) {
   const dividerStyles = {
@@ -8,7 +7,6 @@ export function Divider({ color = "#e5e5e5", margin = 20, className }: DividerPr
     marginTop: margin,
     marginBottom: margin,
   };
-  const dividerClassName = cn(s.divider, className);
 
-  return <div className={dividerClassName} style={dividerStyles} />;
+  return <Wrapper className={className} style={dividerStyles} />;
 }
