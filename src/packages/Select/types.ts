@@ -1,43 +1,28 @@
-export enum ButtonShape {
+export enum SelectShape {
   Round = "round",
   Square = "square",
 }
 
-export enum ButtonSize {
+export enum SelectSize {
   Small = "small",
   Medium = "medium",
   Big = "big",
 }
 
-export enum ButtonVariant {
+export enum SelectVariant {
   Filled = "filled",
   Ghost = "ghost",
   Outline = "outline",
 }
 
-export interface ButtonProps {
+export interface SelectProps {
   /**
-   * Button content
+   * Select content
    */
   text: string;
-  /**
-   * Button type as filled, transparent or empty with border
-   */
-  variant?: ButtonVariant;
-  /**
-   * Button shape: round or square
-   */
-  shape?: ButtonShape;
-  /**
-   * Button size
-   */
-  size?: ButtonSize;
-  /**
-   * Button custom classnames
-   */
   className?: string;
   /**
-   * Button disabled or not option
+   * Select disabled or not option
    */
   disabled?: boolean;
   /**

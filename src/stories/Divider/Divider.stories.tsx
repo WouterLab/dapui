@@ -1,7 +1,7 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { DividerProps } from "../../packages/Divider";
-import styles from "./Divider.module.css";
 import { Divider as DividerComponent } from "../../packages/Divider";
+import { Wrapper } from "./styled";
 
 const meta = {
   title: "Base/Divider",
@@ -14,11 +14,11 @@ const meta = {
 
 function Template({ ...args }) {
   return (
-    <div className={styles.wrapper}>
+    <Wrapper>
       <div>some content</div>
       <DividerComponent {...args} />
       <div>to divide from each other</div>
-    </div>
+    </Wrapper>
   );
 }
 

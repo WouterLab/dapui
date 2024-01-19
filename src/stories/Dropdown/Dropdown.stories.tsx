@@ -1,6 +1,6 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { Dropdown as DropdownComponent, DropdownProps } from "../../packages/Dropdown";
-import styles from "./Dropdown.module.css";
+import { Content, Example, Wrapper, arrowStyles, customStyles } from "./styled";
 
 const meta = {
   title: "Composite/Dropdown",
@@ -13,17 +13,17 @@ const meta = {
 
 function Template({ ...args }: DropdownProps) {
   return (
-    <div className={styles.wrapper}>
+    <Wrapper>
       <DropdownComponent {...args}>
-        <div className={styles.content}>
-          <div className={styles.example}>Any React Node content here...</div>
-          <div className={styles.example}>Any React Node content here...</div>
-          <div className={styles.example}>Any React Node content here...</div>
-          <div className={styles.example}>Any React Node content here...</div>
-          <div className={styles.example}>Any React Node content here...</div>
-        </div>
+        <Content>
+          <Example>Any React Node content here...</Example>
+          <Example>Any React Node content here...</Example>
+          <Example>Any React Node content here...</Example>
+          <Example>Any React Node content here...</Example>
+          <Example>Any React Node content here...</Example>
+        </Content>
       </DropdownComponent>
-    </div>
+    </Wrapper>
   );
 }
 
@@ -39,7 +39,7 @@ export const Custom: StoryFn<DropdownProps> = Template.bind({});
 Custom.args = {
   title: "Custom Dropdown",
   subtitle: "Example subtitle",
-  className: styles.custom,
-  arrowClassName: styles.arrow,
+  className: customStyles,
+  arrowClassName: arrowStyles,
   isOpenDefault: true,
 };

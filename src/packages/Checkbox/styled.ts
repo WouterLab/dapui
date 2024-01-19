@@ -1,31 +1,34 @@
 import { styled } from "@linaria/react";
 import { css } from "@linaria/core";
 
+import { COLORS } from "../Colors";
+const { BLACK, GREY } = COLORS;
+
 export const Wrapper = styled.div`
   border-radius: 10px;
   width: 24px;
   height: 24px;
   cursor: pointer;
-  background-color: #e5e5e5;
+  background-color: ${GREY[10]};
   transition: all 0.3s;
 
   &:hover {
-    background-color: #d0d0d0;
+    background-color: ${GREY[50]};
   }
 
   &:active {
-    background-color: #efefef;
+    background-color: ${GREY[60]};
   }
 `;
 
-export const cssChecked = css`
-  background-color: #2b2b2b;
+export const checkedStyles = css`
+  background-color: ${BLACK[50]};
 
   &:hover {
-    background-color: #3c3c3c;
+    background-color: ${BLACK[80]};
   }
 
   &:active {
-    background-color: #151515;
+    background-color: ${BLACK[100]};
   }
 `;

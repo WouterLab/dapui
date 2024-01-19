@@ -1,8 +1,8 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { InputProps, InputSize, InputVariant } from "../../packages/Input";
-import styles from "./Input.module.css";
 import { Input as InputComponent } from "../../packages/Input";
 import { ChangeEvent, useState } from "react";
+import { Wrapper, customStyles } from "./styled";
 
 const meta = {
   title: "Base/Input",
@@ -44,10 +44,10 @@ function Template({ ...args }) {
   };
 
   return (
-    <div className={styles.wrapper}>
+    <Wrapper>
       <InputComponent value={value} onChange={handleChange} {...args} />
       <div>You entered: {value}</div>
-    </div>
+    </Wrapper>
   );
 }
 
@@ -67,6 +67,6 @@ Outline.args = {
 
 export const Custom: StoryFn<InputProps> = Template.bind({});
 Custom.args = {
-  className: styles.test,
+  className: customStyles,
   placeholder: "Custom",
 };

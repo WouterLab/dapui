@@ -1,11 +1,13 @@
 import { styled } from "@linaria/react";
 import { css } from "@linaria/core";
-import { H2BoldStyles, H3Styles } from "../Typography";
+import { H2_BOLD_STYLES, H3_STYLES } from "../Typography";
+import { COLORS } from "../Colors";
+const { BLACK, GREY } = COLORS;
 
 export const Wrapper = styled.div`
   width: 100%;
-  background-color: #454545;
-  color: #fff;
+  background-color: ${BLACK[0]};
+  color: ${GREY[0]};
   border-radius: 10px;
   font-family: "Kanit", sans-serif;
 `;
@@ -22,26 +24,26 @@ export const TitleWrapper = styled.div`
 `;
 
 export const Title = styled.div`
-  ${H2BoldStyles};
+  ${H2_BOLD_STYLES};
 `;
 
-export const cssArrow = css`
+export const arrowStyles = css`
   width: 24px;
   height: 24px;
   transition: all 0.3s;
 
   path {
-    fill: #fff;
+    fill: ${GREY[0]};
   }
 `;
 
-export const cssReverse = css`
+export const reverseStyles = css`
   transform: rotate(180deg);
 `;
 
 export const Subtitle = styled.div`
   margin-top: 10px;
-  ${H3Styles};
+  ${H3_STYLES};
 `;
 
 export const Content = styled.div`
@@ -56,7 +58,7 @@ export const Content = styled.div`
   overflow: hidden;
 `;
 
-export const cssHidden = css`
+export const hiddenStyles = css`
   max-height: 0px;
   overflow: hidden;
   margin-top: 0;

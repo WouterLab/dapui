@@ -1,11 +1,11 @@
 import { CheckboxProps } from "./types";
 import classNames from "classnames";
-import { Wrapper, cssChecked } from "./styled";
+import { Wrapper, checkedStyles } from "./styled";
 
 export const Checkbox = ({ checked, onChange, className }: CheckboxProps) => {
   const checkboxClassName = classNames(
     {
-      [cssChecked]: checked,
+      [checkedStyles]: checked,
     },
     className,
   );

@@ -1,17 +1,19 @@
-.wrapper {
+import { styled } from "@linaria/react";
+
+export const Wrapper = styled.div`
   display: flex;
   gap: 50px;
   flex-wrap: wrap;
   font-family: "Kanit", sans-serif;
-}
+`;
 
-.block {
+export const Block = styled.div`
   border-radius: 10px;
   overflow: hidden;
   border: 2px solid grey;
-}
+`;
 
-.theme {
+export const Theme = styled.div`
   background-color: #2a343e;
   color: #fff;
   font-size: 36px;
@@ -21,28 +23,28 @@
   align-items: flex-end;
   padding: 20px;
   margin-bottom: 20px;
-}
+`;
 
-.key {
+export const Key = styled.div`
   font-weight: 700;
-}
+`;
 
-.color {
+export const Color = styled.div`
   padding: 0 20px 20px 20px;
   display: flex;
   justify-content: space-between;
-}
+`;
 
-.text {
+export const Text = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 5px 0;
-}
+`;
 
-.view {
+export const View = styled.div`
   border-radius: 10px;
   width: 50%;
   height: 50px;
   border: 2px solid grey;
-}
+`;

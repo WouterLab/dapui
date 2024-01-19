@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import { Button } from "../../packages/Button";
-import styles from "./Button.module.css";
 import { ButtonShape, ButtonSize, ButtonVariant } from "../../packages/Button/types";
+import { customStyles } from "./styles";
 
 const meta = {
   title: "Base/Button",
@@ -72,6 +72,6 @@ export const Custom: Story = {
   args: {
     text: "Click!",
     variant: ButtonVariant.Filled,
-    className: styles.test,
+    className: customStyles,
   },
 };

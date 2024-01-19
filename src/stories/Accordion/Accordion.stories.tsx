@@ -4,7 +4,7 @@ import {
   AccordionProps,
   AccordionStep,
 } from "../../packages/Accordion";
-import styles from "./Accordion.module.css";
+import { Content, Wrapper, arrowStyles, customStyles } from "./styled";
 
 const meta = {
   title: "Composite/Accordion",
@@ -21,27 +21,27 @@ const lorem =
 const stepsExample: AccordionStep[] = [
   {
     title: "This is an example first step of Accordion",
-    content: <div className={styles.content}>{lorem}</div>,
+    content: <Content>{lorem}</Content>,
   },
   {
     title: "This is an example second step of Accordion",
-    content: <div className={styles.content}>{lorem}</div>,
+    content: <Content>{lorem}</Content>,
   },
   {
     title: "This is an example third step of Accordion",
-    content: <div className={styles.content}>{lorem}</div>,
+    content: <Content>{lorem}</Content>,
   },
   {
     title: "This is an example fourth step of Accordion",
-    content: <div className={styles.content}>{lorem}</div>,
+    content: <Content>{lorem}</Content>,
   },
 ];
 
 function Template({ ...args }: AccordionProps) {
   return (
-    <div className={styles.wrapper}>
+    <Wrapper>
       <AccordionComponent {...args} />
-    </div>
+    </Wrapper>
   );
 }
 
@@ -55,8 +55,8 @@ Default.args = {
 export const Custom: StoryFn<AccordionProps> = Template.bind({});
 Custom.args = {
   steps: stepsExample,
-  className: styles.custom,
-  arrowClassName: styles.arrow,
+  className: customStyles,
+  arrowClassName: arrowStyles,
   dividerColor: "#fff",
   defaultOpenedSteps: [0, 2],
 };

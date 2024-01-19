@@ -1,5 +1,4 @@
 import { AccordionProps, AccordionStep } from "./types";
-import { H3 } from "../Typography";
 import { HTMLAttributes, useRef, useState } from "react";
 import cn from "classnames";
 import { Divider } from "../Divider";
@@ -8,11 +7,13 @@ import {
   Header,
   StepWrapper,
   Title,
+  TitleWrapper,
   Wrapper,
-  cssArrow,
-  cssHidden,
-  cssReverse,
+  arrowStyles,
+  hiddenStyles,
+  reverseStyles,
 } from "./styled";
+import { COLORS } from "../Colors";
 
 function ArrowSvg({ ...args }: HTMLAttributes<SVGElement>) {
   return (
@@ -33,7 +34,7 @@ function ArrowSvg({ ...args }: HTMLAttributes<SVGElement>) {
         d='M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
  c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
  s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z'
-        fill='#000'
+        fill={COLORS.BLACK[100]}
       />
     </svg>
   );
@@ -43,12 +44,12 @@ function Step({ title, content, arrowClassName, onChange, isOpenDefault }: Accor
   const [isOpen, setIsOpen] = useState(isOpenDefault);
   const ContentRef = useRef<HTMLDivElement>(null);
   const contentClassName = cn({
-    [cssHidden]: !isOpen,
+    [hiddenStyles]: !isOpen,
   });
   const arrowClass = cn(
-    cssArrow,
+    arrowStyles,
     {
-      [cssReverse]: isOpen,
+      [reverseStyles]: isOpen,
     },
     arrowClassName,
   );
@@ -71,10 +72,10 @@ function Step({ title, content, arrowClassName, onChange, isOpenDefault }: Accor
   return (
     <StepWrapper>
       <Header onClick={toggleOpening}>
-        <Title>
-          <H3>{title}</H3>
+        <TitleWrapper>
+          <Title>{title}</Title>
           <ArrowSvg className={arrowClass} />
-        </Title>
+        </TitleWrapper>
       </Header>
 
       <Content

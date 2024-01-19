@@ -1,6 +1,6 @@
 import { ColorMap } from "./types";
 
-export const COLORS_DEFAULT: ColorMap = {
+export const COLORS: ColorMap = {
   GREY: {
     0: "#ffffff",
     10: "#e5e5e5",
@@ -9,7 +9,7 @@ export const COLORS_DEFAULT: ColorMap = {
   },
   BLACK: {
     0: "#454545",
-    20: "#2b2b2b",
+    50: "#2b2b2b",
     80: "#1a1a1a",
     100: "#000000",
   },

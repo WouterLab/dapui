@@ -2,13 +2,13 @@ import cn from "classnames";
 import { ButtonProps, ButtonShape, ButtonSize, ButtonVariant } from "./types";
 import {
   Wrapper,
-  cssBig,
-  cssDisabled,
-  cssRound,
-  cssGhost,
-  cssMedium,
-  cssOutline,
-  cssSmall,
+  bigStyles,
+  disabledStyles,
+  roundStyles,
+  ghostStyles,
+  mediumStyles,
+  outlineStyles,
+  smallStyles,
 } from "./styled";
 
 export function Button({
@@ -24,20 +24,20 @@ export function Button({
   const getSize = () => {
     switch (size) {
       case ButtonSize.Big:
-        return cssBig;
+        return bigStyles;
       case ButtonSize.Small:
-        return cssSmall;
+        return smallStyles;
       default:
-        return cssMedium;
+        return mediumStyles;
     }
   };
 
   const getVariant = () => {
     switch (variant) {
       case ButtonVariant.Outline:
-        return cssOutline;
+        return outlineStyles;
       case ButtonVariant.Ghost:
-        return cssGhost;
+        return ghostStyles;
       default:
         return "";
     }
@@ -47,8 +47,8 @@ export function Button({
     getVariant(),
     getSize(),
     {
-      [cssDisabled]: disabled,
-      [cssRound]: shape === ButtonShape.Round,
+      [disabledStyles]: disabled,
+      [roundStyles]: shape === ButtonShape.Round,
     },
     className,
   );
