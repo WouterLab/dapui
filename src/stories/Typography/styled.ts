@@ -10,10 +10,10 @@ import {
   H3_STYLES,
   H4_BOLD_STYLES,
   H4_STYLES,
-  P1_STYLES,
-  P2_STYLES,
-  P3_STYLES,
-  P4_STYLES,
+  TEXT1_STYLES,
+  TEXT2_STYLES,
+  TEXT3_STYLES,
+  TEXT4_STYLES,
 } from "../../packages/Typography";
 const { GREY, BLACK } = COLORS;
 
@@ -39,41 +39,41 @@ export const h1BoldStyles = css`
 `;
 
 export const h2Styles = css`
-  ${H2_STYLES}
+  ${H2_STYLES};
 `;
 
 export const h2BoldStyles = css`
-  ${H2_BOLD_STYLES}
+  ${H2_BOLD_STYLES};
 `;
 
 export const h3Styles = css`
-  ${H3_STYLES}
+  ${H3_STYLES};
 `;
 
 export const h3BoldStyles = css`
-  ${H3_BOLD_STYLES}
+  ${H3_BOLD_STYLES};
 `;
 
 export const h4Styles = css`
-  ${H4_STYLES}
+  ${H4_STYLES};
 `;
 
 export const h4BoldStyles = css`
-  ${H4_BOLD_STYLES}
+  ${H4_BOLD_STYLES};
 `;
 
 export const p1Styles = css`
-  ${P1_STYLES}
+  ${TEXT1_STYLES};
 `;
 
 export const p2Styles = css`
-  ${P2_STYLES}
+  ${TEXT2_STYLES};
 `;
 
 export const p3Styles = css`
-  ${P3_STYLES}
+  ${TEXT3_STYLES};
 `;
 
 export const p4Styles = css`
-  ${P4_STYLES}
+  ${TEXT4_STYLES};
 `;

@@ -14,8 +14,14 @@ export const customStyles = css`
   background-color: ${RED[0]};
   color: ${GREY[0]};
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: ${RED[100]};
     color: ${GREY[0]};
+    outline: none;
+
+    &::placeholder {
+      color: ${GREY[0]};
+    }
   }
 `;

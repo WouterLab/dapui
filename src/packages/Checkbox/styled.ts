@@ -13,11 +13,11 @@ export const Wrapper = styled.div`
   transition: all 0.3s;
 
   &:hover {
-    background-color: ${GREY[50]};
+    background-color: ${GREY[20]};
   }
 
   &:active {
-    background-color: ${GREY[60]};
+    background-color: ${GREY[50]};
   }
 `;
 

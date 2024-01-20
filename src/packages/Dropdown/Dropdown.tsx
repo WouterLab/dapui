@@ -68,7 +68,7 @@ export function Dropdown({
     const content = ContentRef.current;
     if (content) {
       if (currentMaxHeight === "0px") {
-        setCurrentMaxHeight(content.scrollHeight + 20 + "px");
+        setCurrentMaxHeight(content.scrollHeight + 30 + "px");
       } else {
         setCurrentMaxHeight("0px");
       }

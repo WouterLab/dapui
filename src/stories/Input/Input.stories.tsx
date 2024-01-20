@@ -36,17 +36,17 @@ const meta = {
   tags: ["autodocs"],
 } satisfies Meta;
 
-function Template({ ...args }) {
-  const [value, setValue] = useState("");
+function Template({ value, ...args }: InputProps) {
+  const [inputValue, setInputValue] = useState(value);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
+    setInputValue(e.target.value);
   };
 
   return (
     <Wrapper>
-      <InputComponent value={value} onChange={handleChange} {...args} />
-      <div>You entered: {value}</div>
+      <InputComponent value={inputValue} onChange={handleChange} {...args} />
+      <div>You entered: {inputValue}</div>
     </Wrapper>
   );
 }

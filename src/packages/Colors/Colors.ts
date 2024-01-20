@@ -4,8 +4,8 @@ export const COLORS: ColorMap = {
   GREY: {
     0: "#ffffff",
     10: "#e5e5e5",
-    50: "#d4d4d4",
-    60: "#b0b0b0",
+    20: "#d4d4d4",
+    50: "#b0b0b0",
   },
   BLACK: {
     0: "#454545",

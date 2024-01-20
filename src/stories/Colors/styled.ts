@@ -1,4 +1,6 @@
 import { styled } from "@linaria/react";
+import { COLORS } from "../../packages/Colors";
+const { GREY, BLACK } = COLORS;
 
 export const Wrapper = styled.div`
   display: flex;
@@ -10,19 +12,17 @@ export const Wrapper = styled.div`
 export const Block = styled.div`
   border-radius: 10px;
   overflow: hidden;
-  border: 2px solid grey;
 `;
 
 export const Theme = styled.div`
-  background-color: #2a343e;
-  color: #fff;
+  background-color: ${BLACK[50]};
+  color: ${GREY[0]};
   font-size: 36px;
   height: 100px;
   width: 300px;
   display: flex;
   align-items: flex-end;
   padding: 20px;
-  margin-bottom: 20px;
 `;
 
 export const Key = styled.div`
@@ -30,9 +30,11 @@ export const Key = styled.div`
 `;
 
 export const Color = styled.div`
-  padding: 0 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
   display: flex;
   justify-content: space-between;
+  background-color: gray;
+  color: ${GREY[0]};
 `;
 
 export const Text = styled.div`
@@ -46,5 +48,5 @@ export const View = styled.div`
   border-radius: 10px;
   width: 50%;
   height: 50px;
-  border: 2px solid grey;
+  border: 2px solid ${GREY[0]};
 `;

@@ -1,6 +1,6 @@
 import { styled } from "@linaria/react";
 import { css } from "@linaria/core";
-import { H2_BOLD_STYLES, H3_STYLES } from "../Typography";
+import { H2_BOLD_STYLES, H3_STYLES, TEXT1_STYLES } from "../Typography";
 import { COLORS } from "../Colors";
 const { BLACK, GREY } = COLORS;
 
@@ -9,22 +9,7 @@ export const Wrapper = styled.div`
   background-color: ${BLACK[0]};
   color: ${GREY[0]};
   border-radius: 10px;
-  font-family: "Kanit", sans-serif;
-`;
-
-export const Header = styled.div`
-  cursor: pointer;
-  padding: 20px;
-`;
-
-export const TitleWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const Title = styled.div`
-  ${H2_BOLD_STYLES};
+  ${TEXT1_STYLES};
 `;
 
 export const arrowStyles = css`
@@ -35,6 +20,32 @@ export const arrowStyles = css`
   path {
     fill: ${GREY[0]};
   }
+`;
+
+export const Header = styled.div`
+  cursor: pointer;
+  padding: 30px 60px;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: ${GREY[20]};
+
+    .${arrowStyles} {
+      path {
+        fill: ${GREY[20]};
+      }
+    }
+  }
+`;
+
+export const TitleWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const Title = styled.div`
+  ${H2_BOLD_STYLES};
 `;
 
 export const reverseStyles = css`
@@ -48,12 +59,12 @@ export const Subtitle = styled.div`
 
 export const Content = styled.div`
   transition:
-    max-height 0.3s,
-    margin-top 0.3s,
-    padding-top 0.3s,
-    padding-bottom 0.3s;
+    max-height 0.3s ease-in-out,
+    margin-top 0.3s ease-in-out,
+    padding-top 0.3s ease-in-out,
+    padding-bottom 0.3s ease-in-out;
   opacity: 1;
-  padding: 0 20px 20px 20px;
+  padding: 0 60px 30px 60px;
   box-sizing: border-box;
   overflow: hidden;
 `;
@@ -62,5 +73,5 @@ export const hiddenStyles = css`
   max-height: 0px;
   overflow: hidden;
   margin-top: 0;
-  padding: 0 20px;
+  padding: 0 60px;
 `;

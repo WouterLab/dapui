@@ -1,6 +1,7 @@
 import { styled } from "@linaria/react";
 import { css } from "@linaria/core";
 import { COLORS } from "../Colors";
+import { TEXT1_STYLES, TEXT3_STYLES, TEXT4_STYLES } from "../Typography";
 const { BLACK, GREY } = COLORS;
 
 export const Wrapper = styled.input`
@@ -8,39 +9,46 @@ export const Wrapper = styled.input`
     background-color 0.3s,
     opacity 0.3s,
     color 0.3s;
-  font-family: "Kanit", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
+  ${TEXT3_STYLES};
   height: fit-content;
-  color: ${BLACK[0]};
-  background-color: ${GREY[0]};
+  color: ${GREY[0]};
+  background-color: ${BLACK[0]};
   border-radius: 10px;
   outline: none;
   border: none;
 
   &:hover {
-    background-color: ${GREY[50]};
+    background-color: ${BLACK[50]};
   }
 
   &:focus {
-    background-color: ${GREY[50]};
+    background-color: ${GREY[20]};
     outline: 2px solid ${BLACK[0]};
     outline-offset: -2px;
+    color: ${BLACK[50]};
+
+    &::placeholder {
+      color: ${BLACK[0]};
+    }
+  }
+
+  &::placeholder {
+    color: ${GREY[10]};
   }
 `;
 
 export const smallStyles = css`
-  font-size: 14px;
+  ${TEXT4_STYLES};
   padding: 5px 10px;
 `;
 
 export const mediumStyles = css`
-  font-size: 18px;
+  ${TEXT3_STYLES};
   padding: 10px 16px;
 `;
 
 export const bigStyles = css`
-  font-size: 22px;
+  ${TEXT1_STYLES};
   padding: 14px 24px;
 `;
 
@@ -53,6 +61,21 @@ export const outlineStyles = css`
   &:hover,
   &:focus {
     background-color: transparent;
+  }
+
+  &:focus {
+    background-color: ${BLACK[50]};
+    outline: 2px solid ${BLACK[0]};
+    outline-offset: -2px;
+    color: ${GREY[0]};
+
+    &::placeholder {
+      color: ${GREY[10]};
+    }
+  }
+
+  &::placeholder {
+    color: ${BLACK[0]};
   }
 `;
 

@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
 export const customStyles = css`
   background-color: ${RED[0]};
   color: ${GREY[0]};
+  border-radius: 30px;
 `;
 
 export const arrowStyles = css`
@@ -17,5 +18,5 @@ export const arrowStyles = css`
 `;
 
 export const Content = styled.div`
-  color: #e5e5e5;
+  color: ${GREY[10]};
 `;
