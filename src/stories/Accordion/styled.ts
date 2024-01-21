@@ -5,6 +5,10 @@ const { GREY, RED } = COLORS;
 
 export const Wrapper = styled.div`
   width: 800px;
+
+  @media (max-width: 820px) {
+    width: 100%;
+  }
 `;
 
 export const customStyles = css`

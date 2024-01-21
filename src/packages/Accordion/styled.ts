@@ -10,6 +10,10 @@ export const Wrapper = styled.div`
   background-color: ${BLACK[0]};
   color: ${GREY[0]};
   padding: 20px 60px;
+
+  @media (max-width: 768px) {
+    padding: 10px 20px;
+  }
 `;
 
 export const StepWrapper = styled.div`
@@ -20,6 +24,8 @@ export const StepWrapper = styled.div`
 export const arrowStyles = css`
   width: 24px;
   height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   transition: all 0.3s;
 
   path {
@@ -47,6 +53,7 @@ export const TitleWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 `;
 
 export const Title = styled.div`

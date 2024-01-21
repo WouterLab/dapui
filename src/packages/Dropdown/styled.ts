@@ -15,6 +15,8 @@ export const Wrapper = styled.div`
 export const arrowStyles = css`
   width: 24px;
   height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   transition: all 0.3s;
 
   path {
@@ -26,6 +28,10 @@ export const Header = styled.div`
   cursor: pointer;
   padding: 30px 60px;
   transition: color 0.3s ease-in-out;
+
+  @media (max-width: 768px) {
+    padding: 10px 20px;
+  }
 
   &:hover {
     color: ${GREY[20]};
@@ -42,6 +48,7 @@ export const TitleWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 `;
 
 export const Title = styled.div`
@@ -67,6 +74,10 @@ export const Content = styled.div`
   padding: 0 60px 30px 60px;
   box-sizing: border-box;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 0 20px 10px 20px;
+  }
 `;
 
 export const hiddenStyles = css`
@@ -74,4 +85,8 @@ export const hiddenStyles = css`
   overflow: hidden;
   margin-top: 0;
   padding: 0 60px;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
 `;
