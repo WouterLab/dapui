@@ -19,7 +19,7 @@ export function Button({
   className,
   disabled,
   onClick,
-  ...rest
+  ...args
 }: ButtonProps) {
   const getSize = () => {
     switch (size) {
@@ -54,7 +54,7 @@ export function Button({
   );
 
   return (
-    <Wrapper className={buttonClass} onClick={onClick} disabled={disabled} {...rest}>
+    <Wrapper className={buttonClass} onClick={onClick} disabled={disabled} {...args}>
       {text}
     </Wrapper>
   );

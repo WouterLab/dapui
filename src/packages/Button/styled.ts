@@ -24,17 +24,17 @@ export const Wrapper = styled.button`
 
 export const smallStyles = css`
   ${TEXT3_STYLES};
-  padding: 5px 30px;
+  padding: 6px 30px;
 `;
 
 export const mediumStyles = css`
   ${TEXT2_STYLES};
-  padding: 7px 30px;
+  padding: 10px 30px;
 `;
 
 export const bigStyles = css`
   ${TEXT1_STYLES};
-  padding: 10px 30px;
+  padding: 14px 30px;
 `;
 
 export const outlineStyles = css`

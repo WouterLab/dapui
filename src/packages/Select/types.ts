@@ -1,3 +1,8 @@
+import { ComponentProps } from "react";
+import ReactSelect from "react-select";
+
+type ReactSelectProps = ComponentProps<typeof ReactSelect>;
+
 export enum SelectShape {
   Round = "round",
   Square = "square",
@@ -11,15 +16,15 @@ export enum SelectSize {
 
 export enum SelectVariant {
   Filled = "filled",
-  Ghost = "ghost",
   Outline = "outline",
 }
 
-export interface SelectProps {
-  /**
-   * Select content
-   */
-  text: string;
+export type Option = {
+  label: string;
+  value: string;
+};
+
+export interface SelectProps extends ReactSelectProps {
   className?: string;
   /**
    * Select disabled or not option
@@ -28,5 +33,8 @@ export interface SelectProps {
   /**
    * Optional click handler
    */
-  onClick?: () => void;
+  variant?: SelectVariant;
+  size?: SelectSize;
+  shape?: SelectShape;
+  onChange: () => void;
 }

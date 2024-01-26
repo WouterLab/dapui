@@ -4,13 +4,9 @@
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
   list-style: none;
   box-sizing: border-box;
-  letter-spacing: 1px;
-  font-weight: 300;
 }
 
 #storybook-docs {

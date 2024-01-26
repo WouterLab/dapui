@@ -1,6 +1,7 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { TextTag } from "../../packages/Typography";
 import {
+  Font,
   Tag,
   Wrapper,
   h1BoldStyles,
@@ -31,6 +32,7 @@ import {
   TEXT3_STYLES,
   TEXT4_STYLES,
 } from "../../packages/Typography";
+import { Divider } from "../../packages/Divider";
 
 const meta = {
   title: "Typography/Text",
@@ -40,45 +42,86 @@ const meta = {
   tags: ["autodocs"],
 } satisfies Meta;
 
+const stylesData = [
+  {
+    title: "H1 Styles",
+    className: h1Styles,
+    font: H1_STYLES,
+  },
+  {
+    title: "H1 Bold Styles",
+    className: h1BoldStyles,
+    font: H1_BOLD_STYLES,
+  },
+  {
+    title: "H2 Styles",
+    className: h2Styles,
+    font: H2_STYLES,
+  },
+  {
+    title: "H2 Bold Styles",
+    className: h2BoldStyles,
+    font: H2_BOLD_STYLES,
+  },
+  {
+    title: "H3 Styles",
+    className: h3Styles,
+    font: H3_STYLES,
+  },
+  {
+    title: "H3 Bold Styles",
+    className: h3BoldStyles,
+    font: H3_BOLD_STYLES,
+  },
+  {
+    title: "H4 Styles",
+    className: h4Styles,
+    font: H4_STYLES,
+  },
+  {
+    title: "H4 Bold Styles",
+    className: h4BoldStyles,
+    font: H4_BOLD_STYLES,
+  },
+  {
+    title: "Text 1 Styles",
+    className: p1Styles,
+    font: TEXT1_STYLES,
+  },
+  {
+    title: "Text 2 Styles",
+    className: p2Styles,
+    font: TEXT2_STYLES,
+  },
+  {
+    title: "Text 3 Styles",
+    className: p3Styles,
+    font: TEXT3_STYLES,
+  },
+  {
+    title: "Text 4 Styles",
+    className: p4Styles,
+    font: TEXT4_STYLES,
+  },
+];
+
 function Template() {
   return (
     <Wrapper>
-      <Tag className={h1Styles}>
-        <div className={h1Styles}>H1 Styles:</div> {H1_STYLES}
-      </Tag>
-      <Tag className={h1BoldStyles}>
-        <div className={h1BoldStyles}>H1 Bold Styles:</div> {H1_BOLD_STYLES}
-      </Tag>
-      <Tag className={h2Styles}>
-        <div className={h2Styles}>H2 Styles:</div> {H2_STYLES}
-      </Tag>
-      <Tag className={h2BoldStyles}>
-        <div className={h2BoldStyles}>H2 Bold Styles:</div> {H2_BOLD_STYLES}
-      </Tag>
-      <Tag className={h3Styles}>
-        <div className={h3Styles}>H3 Styles:</div> {H3_STYLES}
-      </Tag>
-      <Tag className={h3BoldStyles}>
-        <div className={h3BoldStyles}>H3 Bold Styles:</div> {H3_BOLD_STYLES}
-      </Tag>
-      <Tag className={h4Styles}>
-        <div className={h4Styles}>H4 Styles:</div> {H4_STYLES}
-      </Tag>
-      <Tag className={h4BoldStyles}>
-        <div className={h4BoldStyles}>H4 Bold Styles:</div> {H4_BOLD_STYLES}
-      </Tag>
-      <Tag className={p1Styles}>
-        <div className={p1Styles}>Text 1 Styles:</div> {TEXT1_STYLES}
-      </Tag>
-      <Tag className={p2Styles}>
-        <div className={p2Styles}>Text 2 Styles:</div> {TEXT2_STYLES}
-      </Tag>
-      <Tag className={p3Styles}>
-        <div className={p3Styles}>Text 3 Styles:</div> {TEXT3_STYLES}
-      </Tag>
-      <Tag className={p4Styles}>
-        <div className={p4Styles}>Text 4 Styles:</div> {TEXT4_STYLES}
-      </Tag>
+      {stylesData.map(({ title, className, font }) => {
+        return (
+          <Tag className={className} key={title}>
+            <div>{title}:</div>
+            <Divider margin={10} />
+            {font
+              .split(";")
+              .slice(0, -1)
+              .map((el, index) => (
+                <Font key={index}>{el};</Font>
+              ))}
+          </Tag>
+        );
+      })}
     </Wrapper>
   );
 }

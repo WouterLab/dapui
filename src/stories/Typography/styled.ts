@@ -77,3 +77,7 @@ export const p3Styles = css`
 export const p4Styles = css`
   ${TEXT4_STYLES};
 `;
+
+export const Font = styled.div`
+  margin-top: 5px;
+`;

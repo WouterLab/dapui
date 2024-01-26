@@ -39,7 +39,7 @@ export const Wrapper = styled.input`
 
 export const smallStyles = css`
   ${TEXT4_STYLES};
-  padding: 5px 10px;
+  padding: 6px 10px;
 `;
 
 export const mediumStyles = css`

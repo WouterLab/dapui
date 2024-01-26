@@ -18,7 +18,7 @@ export function Input({
   disabled,
   onChange,
   placeholder,
-  ...rest
+  ...args
 }: InputProps) {
   const [inputValue, setInputValue] = useState(value || "");
 
@@ -66,7 +66,7 @@ export function Input({
       disabled={disabled}
       onChange={handleChange}
       placeholder={placeholder}
-      {...rest}
+      {...args}
     />
   );
 }

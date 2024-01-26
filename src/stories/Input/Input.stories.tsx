@@ -3,6 +3,7 @@ import { InputProps, InputSize, InputVariant } from "../../packages/Input";
 import { Input as InputComponent } from "../../packages/Input";
 import { ChangeEvent, useState } from "react";
 import { Wrapper, customStyles } from "./styled";
+import { Divider } from "../../packages/Divider";
 
 const meta = {
   title: "Base/Input",
@@ -46,6 +47,7 @@ function Template({ value, ...args }: InputProps) {
   return (
     <Wrapper>
       <InputComponent value={inputValue} onChange={handleChange} {...args} />
+      <Divider margin={10} />
       <div>You entered: {inputValue}</div>
     </Wrapper>
   );
