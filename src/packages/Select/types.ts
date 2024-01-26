@@ -34,6 +34,5 @@ export interface SelectProps {
   selected: OptionType;
   onChange: (selected: OptionType) => void;
   options: OptionType[];
-  placeholder?: string;
   isOpenDefault?: boolean;
 }

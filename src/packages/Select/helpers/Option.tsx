@@ -4,7 +4,6 @@ import { OptionType } from "..";
 
 export const OptionStyled = styled.li`
   transition: all 0.3s;
-  border-radius: 10px;
   width: 100%;
   cursor: pointer;
 `;
