@@ -16,32 +16,24 @@ export enum ButtonVariant {
 }
 
 export interface ButtonProps {
-  /**
-   * Button content
-   */
+  /** Button content */
   text: string;
-  /**
-   * Button type as filled, transparent or empty with border
-   */
+
+  /** Button type as filled, transparent or empty with border */
   variant?: ButtonVariant;
-  /**
-   * Button shape: round or square
-   */
+
+  /** Button shape: round or square */
   shape?: ButtonShape;
-  /**
-   * Button size
-   */
+
+  /** Button size */
   size?: ButtonSize;
-  /**
-   * Button custom classnames
-   */
+
+  /** Button custom classnames */
   className?: string;
-  /**
-   * Button disabled or not option
-   */
+
+  /** Button disabled or not option */
   disabled?: boolean;
-  /**
-   * Optional click handler
-   */
+
+  /** Optional click handler */
   onClick?: () => void;
 }

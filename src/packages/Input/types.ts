@@ -1,43 +1,44 @@
 import { ChangeEvent, HTMLAttributes } from "react";
 
+/**
+ * Enum defining the possible sizes for the Input component.
+ */
 export enum InputSize {
-  Small = "small",
-  Medium = "medium",
-  Big = "big",
+  Small = "small" /** The small size option */,
+  Medium = "medium" /** The medium size option */,
+  Big = "big" /** The big size option */,
 }
 
+/**
+ * Enum defining the possible variants for the Input component.
+ */
 export enum InputVariant {
-  Filled = "filled",
-  Outline = "outline",
+  Filled = "filled" /** The filled variant option */,
+  Outline = "outline" /** The outline variant option */,
 }
 
+/**
+ * Interface defining the props for the Input component.
+ */
 export interface InputProps extends HTMLAttributes<HTMLInputElement> {
-  /**
-   * Input value as a string
-   */
+  /** The current value of the input. */
   value: string;
-  /**
-   * Input placeholder if no value passed
-   */
+
+  /** Placeholder text to display when the input is empty. */
   placeholder?: string;
-  /**
-   * Input variant as filled or transparent with border
-   */
+
+  /** The variant (filled or outline) for the input. */
   variant?: InputVariant;
-  /**
-   * Input size
-   */
+
+  /** The size (small, medium, or big) for the input. */
   size?: InputSize;
-  /**
-   * Input custom classnames
-   */
+
+  /** Additional class name for styling the Input component. */
   className?: string;
-  /**
-   * Input disabled or not option
-   */
+
+  /** Flag indicating whether the input is disabled. */
   disabled?: boolean;
-  /**
-   * Optional change handler
-   */
+
+  /** Callback function triggered when the input value changes. */
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
