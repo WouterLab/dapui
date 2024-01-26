@@ -53,6 +53,7 @@ export function Dropdown({
   const contentClassName = cn({
     [hiddenStyles]: !isOpen,
   });
+
   const arrowClass = cn(
     arrowStyles,
     {
@@ -60,6 +61,7 @@ export function Dropdown({
     },
     arrowClassName,
   );
+
   const defaultMaxHeight = isOpen ? ContentRef.current?.scrollHeight : "0px";
   const [currentMaxHeight, setCurrentMaxHeight] = useState(defaultMaxHeight);
 

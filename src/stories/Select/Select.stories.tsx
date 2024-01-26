@@ -1,10 +1,16 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { Select as SelectComponent } from "../../packages/Select";
-import { SelectProps, SelectShape, SelectSize, SelectVariant } from "../../packages/Select/types";
+import {
+  OptionType,
+  SelectProps,
+  SelectShape,
+  SelectSize,
+  SelectVariant,
+} from "../../packages/Select/types";
 import { customStyles, Wrapper } from "./styles";
 import { fn } from "@storybook/test";
-import { useState } from "react";
 import { Divider } from "../../packages/Divider";
+import { useState } from "react";
 
 const options = [
   { value: "chocolate", label: "Chocolate" },
@@ -54,13 +60,25 @@ const meta = {
 } satisfies Meta<typeof SelectComponent>;
 
 function Template({ ...args }) {
-  const [value, setValue] = useState("");
+  const [option, setOption] = useState<OptionType>({
+    value: "",
+    label: "Choose value...",
+  });
+
+  const handleChange = (selected: OptionType) => {
+    console.log(selected);
+  };
 
   return (
     <Wrapper>
-      <SelectComponent {...args} onChange={() => {}} />
+      <SelectComponent
+        selected={option}
+        onChange={() => console.log("change")}
+        options={options}
+        {...args}
+      />
       <Divider margin={10} />
-      <div>You chose: {value}</div>
+      <div>You chose: {option.label}</div>
     </Wrapper>
   );
 }
@@ -71,19 +89,17 @@ export const Filled: StoryFn<SelectProps> = Template.bind({});
 Filled.args = {
   variant: SelectVariant.Filled,
   options,
-  placeholder: "Filled",
 };
 
 export const Outline: StoryFn<SelectProps> = Template.bind({});
 Outline.args = {
   variant: SelectVariant.Outline,
   options,
-  placeholder: "Outline",
 };
 
 export const Custom: StoryFn<SelectProps> = Template.bind({});
 Custom.args = {
   className: customStyles,
   options,
-  placeholder: "Custom",
+  isOpenDefault: true,
 };
