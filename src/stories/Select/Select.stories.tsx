@@ -8,7 +8,6 @@ import {
   SelectVariant,
 } from "../../packages/Select/types";
 import { customStyles, Wrapper } from "./styles";
-import { fn } from "@storybook/test";
 import { Divider } from "../../packages/Divider";
 import { useState } from "react";
 
@@ -56,7 +55,6 @@ const meta = {
       defaultValue: false,
     },
   },
-  args: { onChange: fn() },
 } satisfies Meta<typeof SelectComponent>;
 
 function Template({ ...args }) {
@@ -66,17 +64,12 @@ function Template({ ...args }) {
   });
 
   const handleChange = (selected: OptionType) => {
-    console.log(selected);
+    setOption(selected);
   };
 
   return (
     <Wrapper>
-      <SelectComponent
-        selected={option}
-        onChange={() => console.log("change")}
-        options={options}
-        {...args}
-      />
+      <SelectComponent selected={option} onChange={handleChange} options={options} {...args} />
       <Divider margin={10} />
       <div>You chose: {option.label}</div>
     </Wrapper>

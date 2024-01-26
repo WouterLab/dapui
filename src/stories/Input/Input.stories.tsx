@@ -37,8 +37,8 @@ const meta = {
   tags: ["autodocs"],
 } satisfies Meta;
 
-function Template({ value, ...args }: InputProps) {
-  const [inputValue, setInputValue] = useState(value);
+function Template({ ...args }: InputProps) {
+  const [inputValue, setInputValue] = useState("");
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
@@ -46,7 +46,7 @@ function Template({ value, ...args }: InputProps) {
 
   return (
     <Wrapper>
-      <InputComponent value={inputValue} onChange={handleChange} {...args} />
+      <InputComponent onChange={handleChange} {...args} />
       <Divider margin={10} />
       <div>You entered: {inputValue}</div>
     </Wrapper>
@@ -59,16 +59,19 @@ export const Filled: StoryFn<InputProps> = Template.bind({});
 Filled.args = {
   variant: InputVariant.Filled,
   placeholder: "Filled",
+  value: "",
 };
 
 export const Outline: StoryFn<InputProps> = Template.bind({});
 Outline.args = {
   variant: InputVariant.Outline,
   placeholder: "Outline",
+  value: "",
 };
 
 export const Custom: StoryFn<InputProps> = Template.bind({});
 Custom.args = {
   className: customStyles,
   placeholder: "Custom",
+  value: "",
 };

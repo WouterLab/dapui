@@ -1,11 +1,5 @@
 import cn from "classnames";
-import {
-  OptionType,
-  SelectProps,
-  SelectShape,
-  SelectSize,
-  SelectVariant,
-} from "./types";
+import { OptionType, SelectProps, SelectShape, SelectSize, SelectVariant } from "./types";
 import {
   bigStyles,
   disabledStyles,
@@ -85,7 +79,6 @@ export function Select({
   const handleOptionClick = (value: OptionType) => {
     setIsOpen(false);
     onChange(value);
-    console.log(onChange);
   };
 
   const getSize = () => {
