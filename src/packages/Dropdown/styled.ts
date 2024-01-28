@@ -2,13 +2,13 @@ import { styled } from "@linaria/react";
 import { css } from "@linaria/core";
 import { H2_BOLD_STYLES, H3_STYLES, TEXT1_STYLES } from "../Typography";
 import { COLORS } from "../Colors";
-const { BLACK, GREY } = COLORS;
+const { NEUTRAL } = COLORS;
 
 export const Wrapper = styled.div`
   width: 100%;
-  background-color: ${BLACK[0]};
-  color: ${GREY[0]};
-  border-radius: 10px;
+  background-color: ${NEUTRAL[80]};
+  color: ${NEUTRAL[0]};
+  border-radius: 8px;
   ${TEXT1_STYLES};
 `;
 
@@ -20,13 +20,13 @@ export const arrowStyles = css`
   transition: all 0.3s;
 
   path {
-    fill: ${GREY[0]};
+    fill: ${NEUTRAL[0]};
   }
 `;
 
 export const Header = styled.div`
   cursor: pointer;
-  padding: 30px 60px;
+  padding: 20px 60px;
   transition: color 0.3s ease-in-out;
 
   @media (max-width: 768px) {
@@ -34,11 +34,11 @@ export const Header = styled.div`
   }
 
   &:hover {
-    color: ${GREY[20]};
+    color: ${NEUTRAL[40]};
 
     .${arrowStyles} {
       path {
-        fill: ${GREY[20]};
+        fill: ${NEUTRAL[40]};
       }
     }
   }

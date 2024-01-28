@@ -15,10 +15,10 @@ import {
   TEXT3_STYLES,
   TEXT4_STYLES,
 } from "../../packages/Typography";
-const { GREY, BLACK } = COLORS;
+const { NEUTRAL } = COLORS;
 
 export const Wrapper = styled.div`
-  color: ${GREY[0]};
+  color: ${NEUTRAL[0]};
   display: grid;
   gap: 20px;
 `;
@@ -26,8 +26,8 @@ export const Wrapper = styled.div`
 export const Tag = styled.div`
   width: 800px;
   padding: 20px;
-  border-radius: 10px;
-  background-color: ${BLACK[0]};
+  border-radius: 8px;
+  background-color: ${NEUTRAL[80]};
 `;
 
 export const h1Styles = css`

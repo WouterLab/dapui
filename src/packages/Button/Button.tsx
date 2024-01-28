@@ -21,7 +21,7 @@ export function Button({
   onClick,
   ...args
 }: ButtonProps) {
-  const getSize = () => {
+  const getSizeClassName = () => {
     switch (size) {
       case ButtonSize.Big:
         return bigStyles;
@@ -32,7 +32,7 @@ export function Button({
     }
   };
 
-  const getVariant = () => {
+  const getVariantClassName = () => {
     switch (variant) {
       case ButtonVariant.Outline:
         return outlineStyles;
@@ -44,8 +44,8 @@ export function Button({
   };
 
   const buttonClass = cn(
-    getVariant(),
-    getSize(),
+    getVariantClassName(),
+    getSizeClassName(),
     {
       [disabledStyles]: disabled,
       [roundStyles]: shape === ButtonShape.Round,
@@ -54,7 +54,12 @@ export function Button({
   );
 
   return (
-    <Wrapper className={buttonClass} onClick={onClick} disabled={disabled} {...args}>
+    <Wrapper
+      className={buttonClass}
+      onClick={onClick}
+      disabled={disabled}
+      {...args}
+    >
       {text}
     </Wrapper>
   );

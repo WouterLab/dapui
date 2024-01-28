@@ -3,13 +3,13 @@ import { css } from "@linaria/core";
 import { COLORS } from "../Colors";
 import { H3_STYLES, TEXT1_STYLES } from "../Typography";
 
-const { BLACK, GREY } = COLORS;
+const { NEUTRAL } = COLORS;
 
 export const Wrapper = styled.div`
-  border-radius: 10px;
-  background-color: ${BLACK[0]};
-  color: ${GREY[0]};
-  padding: 20px 60px;
+  border-radius: 8px;
+  background-color: ${NEUTRAL[80]};
+  color: ${NEUTRAL[0]};
+  padding: 10px 60px;
 
   @media (max-width: 768px) {
     padding: 10px 20px;
@@ -29,7 +29,7 @@ export const arrowStyles = css`
   transition: all 0.3s;
 
   path {
-    fill: ${GREY[0]};
+    fill: ${NEUTRAL[0]};
   }
 `;
 
@@ -39,11 +39,11 @@ export const Header = styled.div`
   transition: color 0.3s ease-in-out;
 
   &:hover {
-    color: ${GREY[20]};
+    color: ${NEUTRAL[40]};
 
     .${arrowStyles} {
       path {
-        fill: ${GREY[20]};
+        fill: ${NEUTRAL[40]};
       }
     }
   }

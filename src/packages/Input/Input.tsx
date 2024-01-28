@@ -30,7 +30,7 @@ export function Input({
     }
   };
 
-  const getSize = () => {
+  const getSizeClassName = () => {
     switch (size) {
       case InputSize.Big:
         return bigStyles;
@@ -41,7 +41,7 @@ export function Input({
     }
   };
 
-  const getVariant = () => {
+  const getVariantClassName = () => {
     switch (variant) {
       case InputVariant.Outline:
         return outlineStyles;
@@ -51,8 +51,8 @@ export function Input({
   };
 
   const inputClass = cn(
-    getVariant(),
-    getSize(),
+    getVariantClassName(),
+    getSizeClassName(),
     {
       [disabledStyles]: disabled,
     },

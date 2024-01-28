@@ -2,7 +2,7 @@ import { css } from "@linaria/core";
 import { COLORS } from "../Colors";
 import { TEXT1_STYLES, TEXT2_STYLES, TEXT3_STYLES } from "../Typography";
 import { styled } from "@linaria/react";
-const { BLACK, GREY } = COLORS;
+const { NEUTRAL } = COLORS;
 
 export const SelectWrapper = styled.div`
   ${TEXT1_STYLES};
@@ -12,9 +12,9 @@ export const SelectWrapper = styled.div`
 
 export const selectStyles = css`
   transition: all 0.3s;
-  color: ${GREY[0]};
-  background-color: ${BLACK[0]};
-  border-radius: 10px;
+  color: ${NEUTRAL[0]};
+  background-color: ${NEUTRAL[70]};
+  border-radius: 8px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -22,11 +22,12 @@ export const selectStyles = css`
   gap: 20px;
 
   &:hover {
-    background-color: ${BLACK[50]};
+    background-color: ${NEUTRAL[80]};
   }
 
-  &:active {
-    background-color: ${BLACK[80]};
+  &:focus {
+    background-color: ${NEUTRAL[90]};
+    color: ${NEUTRAL[0]};
   }
 `;
 
@@ -71,36 +72,37 @@ export const arrowStyles = css`
   transition: all 0.3s;
 
   path {
-    fill: ${GREY[0]};
+    fill: ${NEUTRAL[0]};
   }
 `;
 
 export const outlineStyles = css`
-  background-color: ${GREY[0]};
-  outline: 2px solid ${BLACK[0]};
+  background-color: ${NEUTRAL[0]};
+  outline: 2px solid ${NEUTRAL[80]};
   outline-offset: -2px;
-  color: ${BLACK[50]};
+  color: ${NEUTRAL[80]};
 
   .${arrowStyles} {
     path {
-      fill: ${BLACK[80]};
+      fill: ${NEUTRAL[80]};
     }
   }
 
   &:hover {
-    background-color: ${BLACK[0]};
-    color: ${GREY[10]};
+    background-color: ${NEUTRAL[80]};
+    color: ${NEUTRAL[10]};
+    outline: 2px solid ${NEUTRAL[80]};
 
     .${arrowStyles} {
       path {
-        fill: ${GREY[0]};
+        fill: ${NEUTRAL[10]};
       }
     }
   }
 
   &:active {
-    background-color: ${BLACK[80]};
-    outline: ${BLACK[80]};
+    background-color: ${NEUTRAL[80]};
+    outline: ${NEUTRAL[80]};
   }
 `;
 

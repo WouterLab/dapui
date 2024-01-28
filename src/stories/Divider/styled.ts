@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #454545;
-  border-radius: 10px;
+  border-radius: 8px;
   color: #fff;
-  font-family: "Kanit", sans-serif;
+  font-family: "Montserrat", sans-serif;
 `;

@@ -2,7 +2,7 @@ import { styled } from "@linaria/react";
 import { css } from "@linaria/core";
 import { COLORS } from "../Colors";
 import { TEXT1_STYLES, TEXT3_STYLES, TEXT4_STYLES } from "../Typography";
-const { BLACK, GREY } = COLORS;
+const { NEUTRAL } = COLORS;
 
 export const Wrapper = styled.input`
   transition:
@@ -11,29 +11,27 @@ export const Wrapper = styled.input`
     color 0.3s;
   ${TEXT3_STYLES};
   height: fit-content;
-  color: ${GREY[0]};
-  background-color: ${BLACK[0]};
-  border-radius: 10px;
+  color: ${NEUTRAL[0]};
+  background-color: ${NEUTRAL[70]};
+  border-radius: 8px;
   outline: none;
   border: none;
 
   &:hover {
-    background-color: ${BLACK[50]};
+    background-color: ${NEUTRAL[80]};
   }
 
   &:focus {
-    background-color: ${GREY[20]};
-    outline: 2px solid ${BLACK[0]};
-    outline-offset: -2px;
-    color: ${BLACK[50]};
+    background-color: ${NEUTRAL[90]};
+    color: ${NEUTRAL[0]};
 
     &::placeholder {
-      color: ${BLACK[0]};
+      color: ${NEUTRAL[0]};
     }
   }
 
   &::placeholder {
-    color: ${GREY[10]};
+    color: ${NEUTRAL[10]};
   }
 `;
 
@@ -54,28 +52,37 @@ export const bigStyles = css`
 
 export const outlineStyles = css`
   background-color: transparent;
-  outline: 2px solid ${BLACK[0]};
+  outline: 2px solid ${NEUTRAL[80]};
   outline-offset: -2px;
-  color: ${BLACK[50]};
+  color: ${NEUTRAL[80]};
+  transition: all 0.3s;
 
   &:hover,
   &:focus {
     background-color: transparent;
+    color: ${NEUTRAL[60]};
+    outline: 2px solid ${NEUTRAL[60]};
+    outline-offset: -2px;
+
+    &::placeholder {
+      color: ${NEUTRAL[50]};
+    }
   }
 
   &:focus {
-    background-color: ${BLACK[50]};
-    outline: 2px solid ${BLACK[0]};
+    background-color: ${NEUTRAL[80]};
+    outline: 2px solid ${NEUTRAL[80]};
     outline-offset: -2px;
-    color: ${GREY[0]};
+    color: ${NEUTRAL[0]};
 
     &::placeholder {
-      color: ${GREY[10]};
+      color: ${NEUTRAL[50]};
     }
   }
 
   &::placeholder {
-    color: ${BLACK[0]};
+    color: ${NEUTRAL[50]};
+    transition: all 0.3s;
   }
 `;
 

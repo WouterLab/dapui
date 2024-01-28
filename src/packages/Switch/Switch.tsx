@@ -9,12 +9,15 @@ export function Switch({
   onChange,
   disabled = false,
   size = SwitchSize.Big,
-  onColor = COLORS.BLACK[0],
-  offColor = COLORS.GREY[20],
-  onHandleColor = COLORS.GREY[0],
-  offHandleColor = COLORS.GREY[0],
+  onColor = COLORS.NEUTRAL[70],
+  offColor = COLORS.NEUTRAL[40],
+  onHandleColor = COLORS.NEUTRAL[10],
+  offHandleColor = COLORS.NEUTRAL[0],
 }: SwitchProps) {
-  const { height, width, handleDiameter } = useMemo(() => SizeMap[size], [size]);
+  const { height, width, handleDiameter } = useMemo(
+    () => SizeMap[size],
+    [size],
+  );
 
   return (
     <ReactSwitch

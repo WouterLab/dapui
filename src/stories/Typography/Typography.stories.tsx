@@ -1,5 +1,4 @@
 import type { Meta, StoryFn } from "@storybook/react";
-import { TextTag } from "../../packages/Typography";
 import {
   Font,
   Tag,
@@ -128,4 +127,4 @@ function Template() {
 
 export default meta;
 
-export const Typography: StoryFn<TextTag> = Template.bind({});
+export const Typography: StoryFn = Template.bind({});

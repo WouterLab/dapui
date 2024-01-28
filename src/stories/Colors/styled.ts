@@ -1,28 +1,25 @@
 import { styled } from "@linaria/react";
 import { COLORS } from "../../packages/Colors";
-const { GREY, BLACK } = COLORS;
+const { NEUTRAL } = COLORS;
 
 export const Wrapper = styled.div`
   display: flex;
-  gap: 50px;
+  gap: 10px;
   flex-wrap: wrap;
-  font-family: "Kanit", sans-serif;
-`;
-
-export const Block = styled.div`
-  border-radius: 10px;
-  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
 `;
 
 export const Theme = styled.div`
-  background-color: ${BLACK[50]};
-  color: ${GREY[0]};
+  background-color: ${NEUTRAL[80]};
+  color: ${NEUTRAL[0]};
   font-size: 36px;
   height: 100px;
   width: 300px;
   display: flex;
   align-items: flex-end;
   padding: 20px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 `;
 
 export const Key = styled.div`
@@ -30,11 +27,17 @@ export const Key = styled.div`
 `;
 
 export const Color = styled.div`
-  padding: 20px 20px 20px 20px;
+  padding: 10px 20px 0 20px;
   display: flex;
   justify-content: space-between;
-  background-color: gray;
-  color: ${GREY[0]};
+  color: ${NEUTRAL[0]};
+`;
+
+export const ColorsWrapper = styled.div`
+  background-color: ${NEUTRAL[60]};
+  padding: 10px 0;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 `;
 
 export const Text = styled.div`
@@ -45,8 +48,8 @@ export const Text = styled.div`
 `;
 
 export const View = styled.div`
-  border-radius: 10px;
+  border-radius: 8px;
   width: 50%;
-  height: 50px;
-  border: 2px solid ${GREY[0]};
+  height: 40px;
+  border: 2px solid ${NEUTRAL[0]};
 `;

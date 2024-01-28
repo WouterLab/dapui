@@ -2,23 +2,23 @@ import { styled } from "@linaria/react";
 import { css } from "@linaria/core";
 import { COLORS } from "../Colors";
 import { TEXT1_STYLES, TEXT2_STYLES, TEXT3_STYLES } from "../Typography";
-const { BLACK, GREY } = COLORS;
+const { NEUTRAL } = COLORS;
 
 export const Wrapper = styled.button`
   cursor: pointer;
   transition: all 0.3s;
   ${TEXT1_STYLES};
   height: fit-content;
-  color: ${GREY[0]};
-  background-color: ${BLACK[0]};
-  border-radius: 10px;
+  color: ${NEUTRAL[0]};
+  background-color: ${NEUTRAL[80]};
+  border-radius: 8px;
 
   &:hover {
-    background-color: ${BLACK[50]};
+    background-color: ${NEUTRAL[90]};
   }
 
   &:active {
-    background-color: ${BLACK[80]};
+    background-color: ${NEUTRAL[100]};
   }
 `;
 
@@ -39,34 +39,34 @@ export const bigStyles = css`
 
 export const outlineStyles = css`
   background-color: transparent;
-  outline: 2px solid ${BLACK[0]};
+  outline: 2px solid ${NEUTRAL[80]};
   outline-offset: -2px;
-  color: ${BLACK[50]};
+  color: ${NEUTRAL[80]};
 
   &:hover {
-    background-color: ${BLACK[0]};
-    color: ${GREY[10]};
+    background-color: ${NEUTRAL[80]};
+    color: ${NEUTRAL[10]};
   }
 
   &:active {
-    background-color: ${BLACK[80]};
-    outline: ${BLACK[80]};
+    background-color: ${NEUTRAL[100]};
+    outline: ${NEUTRAL[100]};
   }
 `;
 
 export const ghostStyles = css`
   background-color: transparent;
   padding: 0 30px;
-  color: ${BLACK[80]};
+  color: ${NEUTRAL[90]};
 
   &:hover {
     background-color: transparent;
-    color: ${GREY[50]};
+    color: ${NEUTRAL[60]};
   }
 
   &:active {
     background-color: transparent;
-    color: ${GREY[10]};
+    color: ${NEUTRAL[40]};
   }
 `;
 

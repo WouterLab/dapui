@@ -2,33 +2,33 @@ import { styled } from "@linaria/react";
 import { css } from "@linaria/core";
 
 import { COLORS } from "../Colors";
-const { BLACK, GREY } = COLORS;
+const { NEUTRAL } = COLORS;
 
 export const Wrapper = styled.div`
-  border-radius: 10px;
+  border-radius: 8px;
   width: 24px;
   height: 24px;
   cursor: pointer;
-  background-color: ${GREY[10]};
+  background-color: ${NEUTRAL[10]};
   transition: all 0.3s;
 
   &:hover {
-    background-color: ${GREY[20]};
+    background-color: ${NEUTRAL[20]};
   }
 
   &:active {
-    background-color: ${GREY[50]};
+    background-color: ${NEUTRAL[80]};
   }
 `;
 
 export const checkedStyles = css`
-  background-color: ${BLACK[50]};
+  background-color: ${NEUTRAL[80]};
 
   &:hover {
-    background-color: ${BLACK[80]};
+    background-color: ${NEUTRAL[80]};
   }
 
   &:active {
-    background-color: ${BLACK[100]};
+    background-color: ${NEUTRAL[90]};
   }
 `;
