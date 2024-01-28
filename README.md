@@ -7,7 +7,7 @@ Welcome to PoniKit - a UI Kit that provides a collection of components to kickst
 To get started, install the UI Kit components using npm:
 
 ```bash
-npm i @ponikit/Button
+npm i ponikit
 ```
 
 ## Usage
@@ -15,8 +15,7 @@ npm i @ponikit/Button
 Once installed, import the components into your project and start using them:
 
 ```javascript
-import { Button } from "@ponikit/Button";
-import { Input } from "@ponikit/Input";
+import { Button, Input } from "ponikit";
 ```
 
 ## Contact
@@ -45,7 +44,7 @@ Explore the design on Figma: [PoniKit Design](https://www.figma.com/example)
 
 ## Project Information
 
-- **Color Scheme:** #2b2b2b, #303030, #e5e5e5
-- **Font:** Kanit, sans-serif
+- **Color Scheme:** "#ffffff", "#f8f9fa", "#e9ecef", "#dee2e6", "#ced4da", "#adb5bd", "#6c757d", "#495057", "#343a40", "#212529"
+- **Font:** Montserrat, sans-serif
 
 ---
