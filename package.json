@@ -6,6 +6,11 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WouterLab/ponikit"
+  },
+  "author": "Danil Panov",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
