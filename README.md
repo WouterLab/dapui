@@ -1,13 +1,13 @@
-# DAP UI
+# PoniKit
 
-Welcome to DAP UI - a UI Kit that provides a collection of components to kickstart your project.
+Welcome to PoniKit - a UI Kit that provides a collection of components to kickstart your project.
 
 ## Installation
 
 To get started, install the UI Kit components using npm:
 
 ```bash
-npm i dapui
+npm i ponikit
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm i dapui
 Once installed, import the components into your project and start using them:
 
 ```javascript
-import { Button, Input } from "dapui";
+import { Button, Input } from "ponikit";
 ```
 
 ## Contact
@@ -40,7 +40,7 @@ npm run storybook
 
 ## Figma Design
 
-Explore the design on Figma: [DAP UI Design](https://www.figma.com/example)
+Explore the design on Figma: [PoniKit Design](https://www.figma.com/example)
 
 ## Project Information
 

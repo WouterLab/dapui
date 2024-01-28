@@ -1,7 +1,7 @@
 {
-  "name": "dapui",
-  "private": true,
-  "version": "0.1.0",
+  "name": "ponikit",
+  "private": false,
+  "version": "1.1.0",
   "type": "module",
   "files": [
     "dist"
