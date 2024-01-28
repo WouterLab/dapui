@@ -1,4 +1,5 @@
 import { styled } from "@linaria/react";
+import { css } from "@linaria/core";
 import { H3_BOLD_STYLES, TEXT1_STYLES, TEXT2_STYLES } from "../Typography";
 import { COLORS } from "../Colors";
 const { NEUTRAL } = COLORS;
@@ -43,4 +44,8 @@ export const Subtitle = styled.div`
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
+`;
+
+export const hiddenStyles = css`
+  display: none;
 `;
