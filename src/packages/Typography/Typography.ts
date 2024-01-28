@@ -64,7 +64,7 @@ export const H4_BOLD_STYLES = `
 
 export const TEXT1_STYLES = `
   font-size: 24px;
-  line-height: 28px;
+  line-height: 130%;
   letter-spacing: 0.4px;
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
@@ -72,7 +72,7 @@ export const TEXT1_STYLES = `
 
 export const TEXT2_STYLES = `
   font-size: 20px;
-  line-height: 24px;
+  line-height: 130%;
   letter-spacing: 0.4px;
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
@@ -80,7 +80,7 @@ export const TEXT2_STYLES = `
 
 export const TEXT3_STYLES = `
   font-size: 18px;
-  line-height: 20px;
+  line-height: 150%;
   letter-spacing: 0.4px;
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
@@ -88,7 +88,7 @@ export const TEXT3_STYLES = `
 
 export const TEXT4_STYLES = `
   font-size: 14px;
-  line-height: 16px;
+  line-height: 150%;
   letter-spacing: 0.4px;
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;

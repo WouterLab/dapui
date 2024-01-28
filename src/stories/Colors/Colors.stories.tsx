@@ -1,14 +1,6 @@
 import type { Meta, StoryFn } from "@storybook/react";
 import { COLORS, ColorMap } from "../../packages/Colors";
-import {
-  Color,
-  ColorsWrapper,
-  Key,
-  Text,
-  Theme,
-  View,
-  Wrapper,
-} from "./styled";
+import { Color, ColorsWrapper, Key, Text, Theme, View, Wrapper } from "./styled";
 
 const meta: Meta = {
   title: "Theme/Colors",
@@ -22,11 +14,11 @@ function Template() {
   return (
     <Wrapper>
       {Object.entries(COLORS).map(([key, theme]) => (
-        <div>
+        <div key={key}>
           <Theme>{key}</Theme>
           <ColorsWrapper>
             {Object.entries(theme).map(([key, color]) => (
-              <Color>
+              <Color key={key}>
                 <Text>
                   <Key>{key}</Key>
                   <div>{color}</div>

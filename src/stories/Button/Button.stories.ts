@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import { Button } from "../../packages/Button";
 import { ButtonShape, ButtonSize, ButtonVariant } from "../../packages/Button/types";
-import { customStyles } from "./styles";
+import { customStyles } from "./styled";
 
 const meta = {
   title: "Base/Button",
