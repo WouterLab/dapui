@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import linaria from "@linaria/vite";
-import path from "path";
+import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,17 +16,10 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/index.ts"),
+      entry: resolve("src", "index.ts"),
       name: "ponikit",
-      formats: ["es"],
-    },
-    rollupOptions: {
-      external: ["react", "react-dom"],
-      output: {
-        globals: {
-          react: "React",
-        },
-      },
+      formats: ["es", "cjs"],
+      fileName: (format) => `ponikit.${format === "cjs" ? "cjs" : "es.js"}`,
     },
   },
 });

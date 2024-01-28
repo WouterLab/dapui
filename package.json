@@ -3,6 +3,10 @@
   "private": false,
   "version": "1.1.2",
   "type": "module",
+  "description": "PoniKit UI Kit",
+  "main": "dist/ponikit.es.js",
+  "module": "dist/ponikit.es.js",
+  "types": "./src/ponikit.d.ts",
   "files": [
     "dist"
   ],
