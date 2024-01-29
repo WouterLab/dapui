@@ -1,7 +1,7 @@
 {
   "name": "ponikit",
   "private": false,
-  "version": "1.1.5",
+  "version": "1.1.7",
   "type": "module",
   "description": "PoniKit UI Kit",
   "main": "dist/ponikit.es.js",
