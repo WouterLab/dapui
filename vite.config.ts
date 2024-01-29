@@ -1,7 +1,9 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import linaria from "@linaria/vite";
-import { resolve } from "path";
+import typescript from "@rollup/plugin-typescript";
+import path from "path";
+import { typescriptPaths } from "rollup-plugin-typescript-paths";
 import dts from "vite-plugin-dts";
 
 // https://vitejs.dev/config/
@@ -16,12 +18,35 @@ export default defineConfig({
       },
     }),
   ],
+  resolve: {
+    alias: [
+      {
+        find: "~",
+        replacement: path.resolve(__dirname, "./src"),
+      },
+    ],
+  },
   build: {
+    manifest: true,
+    minify: true,
+    reportCompressedSize: true,
     lib: {
-      entry: resolve("src", "index.ts"),
-      name: "ponikit",
+      entry: path.resolve(__dirname, "src/index.ts"),
+      fileName: "main",
       formats: ["es", "cjs"],
-      fileName: (format) => `ponikit.${format === "cjs" ? "cjs" : "es.js"}`,
+    },
+    rollupOptions: {
+      external: [],
+      plugins: [
+        typescriptPaths({
+          preserveExtensions: true,
+        }),
+        typescript({
+          sourceMap: false,
+          declaration: true,
+          outDir: "dist",
+        }),
+      ],
     },
   },
 });
