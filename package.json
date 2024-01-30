@@ -1,12 +1,13 @@
 {
   "name": "ponikit",
   "private": false,
-  "version": "1.1.9",
+  "version": "1.0.0",
   "type": "module",
   "description": "PoniKit UI Kit",
   "main": "dist/index.js",
   "module": "dist/index.cjs",
   "types": "dist/index.d.ts",
+  "license": "MIT",
   "files": [
     "dist"
   ],

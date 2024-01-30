@@ -36,7 +36,7 @@ export default defineConfig({
       formats: ["es", "cjs"],
     },
     rollupOptions: {
-      external: ["./src/stories"],
+      external: [path.resolve(__dirname, "src/stories")],
     },
   },
 });
