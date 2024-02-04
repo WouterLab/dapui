@@ -112,7 +112,7 @@ export function Accordion({
           <>
             <Step
               title={title}
-              key={index}
+              key={title}
               content={content}
               arrowClassName={arrowClassName}
               isOpenDefault={isOpened}

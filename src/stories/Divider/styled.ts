@@ -1,4 +1,7 @@
 import { styled } from "@linaria/react";
+import { COLORS } from "../../packages/Colors";
+import { TEXT1_STYLES } from "../../packages/Typography";
+const { NEUTRAL } = COLORS;
 
 export const Wrapper = styled.div`
   width: 400px;
@@ -7,8 +10,8 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #454545;
   border-radius: 8px;
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
+  ${TEXT1_STYLES};
+  background-color: ${NEUTRAL[20]};
+  color: ${NEUTRAL[90]};
 `;

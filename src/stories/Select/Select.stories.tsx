@@ -1,3 +1,4 @@
+import React from "react";
 import type { Meta, StoryFn } from "@storybook/react";
 import { Select as SelectComponent } from "../../packages/Select";
 import {
@@ -69,7 +70,12 @@ function Template({ ...args }) {
 
   return (
     <Wrapper>
-      <SelectComponent selected={option} onChange={handleChange} options={options} {...args} />
+      <SelectComponent
+        selected={option}
+        onChange={handleChange}
+        options={options}
+        {...args}
+      />
       <Divider margin={10} />
       <div>You chose: {option.label}</div>
     </Wrapper>

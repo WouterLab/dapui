@@ -1,6 +1,15 @@
+import React from "react";
 import type { Meta, StoryFn } from "@storybook/react";
 import { COLORS, ColorMap } from "../../packages/Colors";
-import { Color, ColorsWrapper, Key, Text, Theme, View, Wrapper } from "./styled";
+import {
+  Color,
+  ColorsWrapper,
+  Key,
+  Text,
+  Theme,
+  View,
+  Wrapper,
+} from "./styled";
 
 const meta: Meta = {
   title: "Theme/Colors",

@@ -10,3 +10,4 @@ export * from "./Loader";
 export * from "./Select";
 export * from "./Switch";
 export * from "./Typography";
+export * from "./Modal";

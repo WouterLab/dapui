@@ -1,5 +1,9 @@
+import React from "react";
 import type { Meta, StoryFn } from "@storybook/react";
-import { Dropdown as DropdownComponent, DropdownProps } from "../../packages/Dropdown";
+import {
+  Dropdown as DropdownComponent,
+  DropdownProps,
+} from "../../packages/Dropdown";
 import { Content, Example, Wrapper, arrowStyles, customStyles } from "./styled";
 
 const meta = {
