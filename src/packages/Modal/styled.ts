@@ -14,10 +14,6 @@ export const Wrapper = styled.div`
   align-items: center;
   backdrop-filter: blur(8px);
   z-index: 999;
-
-  body {
-    overflow: hidden;
-  }
 `;
 
 export const ModalWrapper = styled.div`

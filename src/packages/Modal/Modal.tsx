@@ -44,6 +44,7 @@ export function Modal({
   const handleClose = useCallback(() => {
     setIsOpen(false);
     onClose && onClose();
+    document.body.style.overflow = "";
   }, [onClose, setIsOpen]);
 
   const handleClick = (e: MouseEvent) => {
@@ -67,6 +68,7 @@ export function Modal({
 
     if (isOpen) {
       window.addEventListener("keydown", handlePress);
+      document.body.style.overflow = "hidden";
     }
 
     return () => {
