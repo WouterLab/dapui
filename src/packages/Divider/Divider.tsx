@@ -3,7 +3,7 @@ import { Wrapper } from "./styled";
 import { DividerProps } from "./types";
 
 export function Divider({
-  color = COLORS.NEUTRAL[10],
+  color = COLORS.NEUTRAL[50],
   margin = 20,
   className,
 }: DividerProps) {

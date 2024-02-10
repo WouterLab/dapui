@@ -9,26 +9,40 @@ export const Wrapper = styled.div`
   width: 24px;
   height: 24px;
   cursor: pointer;
-  background-color: ${NEUTRAL[10]};
+  background-color: ${NEUTRAL[20]};
   transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 
   &:hover {
-    background-color: ${NEUTRAL[20]};
+    background-color: ${NEUTRAL[30]};
   }
 
   &:active {
-    background-color: ${NEUTRAL[80]};
+    background-color: ${NEUTRAL[40]};
   }
 `;
 
-export const checkedStyles = css`
-  background-color: ${NEUTRAL[80]};
+export const checkStyles = css`
+  position: absolute;
+  top: -5px;
+  right: -5px;
+`;
+
+export const outlineStyles = css`
+  background-color: transparent;
+  outline: 2px solid ${NEUTRAL[80]};
+  outline-offset: -2px;
 
   &:hover {
-    background-color: ${NEUTRAL[80]};
+    background-color: transparent;
+    outline: 2px solid ${NEUTRAL[60]};
   }
 
   &:active {
-    background-color: ${NEUTRAL[90]};
+    background-color: transparent;
+    outline: 2px solid ${NEUTRAL[40]};
   }
 `;
