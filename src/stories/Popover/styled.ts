@@ -22,6 +22,8 @@ export const Content = styled.div`
 `;
 
 export const customStyles = css`
-  background-color: ${RED[40]};
-  color: ${NEUTRAL[0]};
+  && {
+    background-color: ${RED[40]};
+    color: ${NEUTRAL[0]};
+  }
 `;
